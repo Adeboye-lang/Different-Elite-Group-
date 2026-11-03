@@ -1,26 +1,120 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg-primary: #0e0e0e;
+    --bg-secondary: #141414;
+    --bg-deep: #080808;
+    --text-primary: #F5F5F5;
+    --text-secondary: #A3A3A3;
+    --text-muted: #666666;
+    --accent-gold: #C8A45D;
+    --accent-gold-light: #DFC27D;
+    --accent-gold-dark: #8F7236;
+    --border-subtle: #222222;
+    --border-frame: #2c2c2c;
+    --border-frame-light: rgba(255, 255, 255, 0.1);
+  }
+
+  * {
+    border-color: var(--border-subtle);
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+  }
+
+  body {
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display), var(--font-sans), system-ui, sans-serif;
+    text-transform: uppercase;
+  }
+
+  ::selection {
+    background-color: rgba(200, 164, 93, 0.3);
+    color: #FFFFFF;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080808;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C8A45D;
+}
+
+/* Gold Gradient Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 30%, #DFC27D 75%, #C8A45D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-glow {
+  box-shadow: 0 0 35px -8px rgba(200, 164, 93, 0.2);
+}
+
+.gold-border-glow {
+  border-color: rgba(200, 164, 93, 0.4);
+  box-shadow: 0 0 20px -5px rgba(200, 164, 93, 0.15);
+}
+
+/* Football Matchday Tunnel Shadow */
+.tunnel-shadow {
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.95);
+}
+
+/* Mown Grass Stripes */
+.pitch-stripes {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.018) 0px,
+    rgba(255, 255, 255, 0.018) 80px,
+    transparent 80px,
+    transparent 160px
+  );
+}
+
+/* Kit Number Outline Type */
+.kit-number {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 900;
+  line-height: 0.8;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(200, 164, 93, 0.55);
+}
+
+/* Matchday Ticker */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker 40s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-ticker {
+    animation: none;
+  }
 }

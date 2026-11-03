@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 46">
+  <path d="M20 1.5 L38 7 V22 C38 33 30 40.5 20 44.5 C10 40.5 2 33 2 22 V7 Z" fill="#0e0e0e" stroke="#C8A45D" stroke-width="2"/>
+  <path d="M20 5.5 L34.5 10 V22 C34.5 30.8 28.2 37 20 40.6 C11.8 37 5.5 30.8 5.5 22 V10 Z" fill="none" stroke="#C8A45D" stroke-opacity="0.35" stroke-width="0.75"/>
+  <text x="20" y="27" text-anchor="middle" fill="#F5F5F5" font-size="12" font-weight="900" font-family="'Arial Narrow', 'Helvetica Neue', Arial, sans-serif" textLength="24" lengthAdjust="spacingAndGlyphs">DEG</text>
+  <circle cx="20" cy="33.5" r="1.6" fill="#C8A45D"/>
+</svg>
