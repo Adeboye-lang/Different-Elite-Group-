@@ -43,7 +43,7 @@ export function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
           isScrolled
-            ? "bg-[#0a0a0a] py-4 border-b border-white/[0.08]"
+            ? "bg-[#16181C] py-4 border-b border-white/[0.08]"
             : "bg-transparent py-6 border-b border-white/[0.05]"
         }`}
       >
@@ -64,7 +64,7 @@ export function Navbar() {
                     className={`relative text-xs uppercase font-display tracking-[0.22em] transition-all duration-300 py-1 ${
                       isActive
                         ? "text-white font-bold"
-                        : "text-[#A3A3A3] hover:text-white font-medium"
+                        : "text-[#B4B8BF] hover:text-white font-medium"
                     }`}
                   >
                     <span>{item.label}</span>
@@ -80,7 +80,7 @@ export function Navbar() {
             <div className="flex items-center gap-4">
               <div className="hidden sm:block">
                 <Button
-                  variant="gold"
+                  variant="accent"
                   size="sm"
                   href="#contact"
                   icon={<ArrowRight className="w-3.5 h-3.5" />}

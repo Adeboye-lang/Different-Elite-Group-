@@ -5,7 +5,7 @@ import Link from "next/link";
 import { cn, scrollToSection } from "@/src/lib/utils";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "gold" | "outline" | "ghost";
+  variant?: "primary" | "accent" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   href?: string;
   children: React.ReactNode;
@@ -37,12 +37,12 @@ export function Button({
 
   const variantStyles = {
     primary:
-      "bg-[#151515] text-[#F5F5F5] border border-[#393939] hover:border-[#C8A45D] hover:bg-[#1a1a1a]",
-    gold: "bg-[#C8A45D] text-[#080808] font-semibold hover:bg-[#DFBF7A]",
+      "bg-[#22252A] text-[#F5F5F5] border border-[#41454C] hover:border-[#C8A45D] hover:bg-[#272A30]",
+    accent: "bg-[#C8A45D] text-[#14161A] font-semibold hover:bg-[#D9B978]",
     outline:
       "bg-transparent text-[#F5F5F5] border border-white/15 hover:border-white/40 hover:bg-white/[0.04]",
     ghost:
-      "bg-transparent text-[#A5A5A5] hover:text-[#F5F5F5] p-0 tracking-[0.18em] border-none shadow-none",
+      "bg-transparent text-[#B4B8BF] hover:text-[#F5F5F5] p-0 tracking-[0.18em] border-none shadow-none",
   };
 
   const content = (

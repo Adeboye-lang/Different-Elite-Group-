@@ -20,7 +20,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#080808",
+  themeColor: "#14161A",
   width: "device-width",
   initialScale: 1,
   maximumScale: 5,
@@ -91,13 +91,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${barlowCondensed.variable} ${plusJakartaSans.variable} scroll-smooth antialiased bg-[#080808] text-[#F5F5F5]`}
+      className={`${barlowCondensed.variable} ${plusJakartaSans.variable} scroll-smooth antialiased bg-[#14161A] text-[#F5F5F5]`}
     >
-      <body className="min-h-screen flex flex-col font-sans selection:bg-[#C8A45D]/20 selection:text-white bg-[#080808] text-[#F5F5F5] overflow-x-hidden">
+      <body className="min-h-screen flex flex-col font-sans selection:bg-[#C8A45D]/20 selection:text-white bg-[#14161A] text-[#F5F5F5] overflow-x-hidden">
         {/* Skip to Content for Accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 bg-[#C8A45D] text-black font-semibold px-4 py-2 text-xs uppercase tracking-widest outline-none"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 bg-[#C8A45D] text-[#14161A] font-semibold px-4 py-2 text-xs uppercase tracking-widest outline-none"
         >
           Skip to main content
         </a>

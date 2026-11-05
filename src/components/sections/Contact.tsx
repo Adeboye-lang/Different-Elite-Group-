@@ -12,10 +12,9 @@ export function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-28 md:py-36 bg-[#0a0a0a] border-t border-white/[0.08] overflow-hidden"
+      className="relative py-28 md:py-36 bg-[#16181C] border-t border-white/[0.08] overflow-hidden"
     >
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-16 md:mb-20 text-center">
           <SectionHeading
@@ -35,11 +34,11 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="group p-6 sm:p-8 border border-white/[0.1] bg-[#121212] hover:border-[#C8A45D]/50 transition-all duration-500 flex flex-col justify-between"
+            className="group p-6 sm:p-8 border border-white/[0.1] bg-[#1F2227] hover:border-[#C8A45D]/50 transition-all duration-500 flex flex-col justify-between"
           >
             <div className="space-y-4">
               <div className="flex items-center justify-between pb-4 border-b border-white/[0.08]">
-                <div className="p-3 border border-white/10 bg-[#181818] group-hover:border-[#C8A45D]/40 transition-colors">
+                <div className="p-3 border border-white/10 bg-[#25282D] group-hover:border-[#C8A45D]/40 transition-colors">
                   <Mail className="w-5 h-5 text-[#C8A45D]" />
                 </div>
                 <span className="text-[10px] font-display uppercase tracking-widest text-[#C8A45D] font-bold">
@@ -48,7 +47,7 @@ export function Contact() {
               </div>
 
               <div>
-                <span className="text-xs font-display uppercase tracking-wider text-[#A3A3A3] font-semibold block">
+                <span className="text-xs font-display uppercase tracking-wider text-[#B4B8BF] font-semibold block">
                   Confidential Enquiries
                 </span>
                 <h3 className="text-xl font-display uppercase tracking-tight text-white font-bold mt-1">
@@ -56,14 +55,14 @@ export function Contact() {
                 </h3>
               </div>
 
-              <p className="text-xs text-[#A3A3A3] font-light leading-relaxed">
+              <p className="text-xs text-[#B4B8BF] font-light leading-relaxed">
                 Direct communication with agency directorship regarding player representation, trials, and career guidance.
               </p>
             </div>
 
             <div className="pt-8">
               <Button
-                variant="gold"
+                variant="accent"
                 size="md"
                 href={`mailto:${siteConfig.contact.email}?subject=Confidential%20Career%20Enquiry%20-%20DEG`}
                 className="w-full"
@@ -83,11 +82,11 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="group p-6 sm:p-8 border border-white/[0.1] bg-[#121212] hover:border-[#C8A45D]/50 transition-all duration-500 flex flex-col justify-between"
+            className="group p-6 sm:p-8 border border-white/[0.1] bg-[#1F2227] hover:border-[#C8A45D]/50 transition-all duration-500 flex flex-col justify-between"
           >
             <div className="space-y-4">
               <div className="flex items-center justify-between pb-4 border-b border-white/[0.08]">
-                <div className="p-3 border border-white/10 bg-[#181818] group-hover:border-[#C8A45D]/40 transition-colors">
+                <div className="p-3 border border-white/10 bg-[#25282D] group-hover:border-[#C8A45D]/40 transition-colors">
                   <InstagramIcon className="w-5 h-5 text-[#C8A45D]" />
                 </div>
                 <span className="text-[10px] font-display uppercase tracking-widest text-[#C8A45D] font-bold">
@@ -96,7 +95,7 @@ export function Contact() {
               </div>
 
               <div>
-                <span className="text-xs font-display uppercase tracking-wider text-[#A3A3A3] font-semibold block">
+                <span className="text-xs font-display uppercase tracking-wider text-[#B4B8BF] font-semibold block">
                   Follow Our Journey
                 </span>
                 <h3 className="text-xl font-display uppercase tracking-tight text-white font-bold mt-1">
@@ -104,7 +103,7 @@ export function Contact() {
                 </h3>
               </div>
 
-              <p className="text-xs text-[#A3A3A3] font-light leading-relaxed">
+              <p className="text-xs text-[#B4B8BF] font-light leading-relaxed">
                 Explore matchday insights, player development updates, and direct messaging on our official Instagram page.
               </p>
             </div>
@@ -132,11 +131,11 @@ export function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="group p-6 sm:p-8 border border-white/[0.1] bg-[#121212] hover:border-[#C8A45D]/50 transition-all duration-500 flex flex-col justify-between md:col-span-2 lg:col-span-1"
+            className="group p-6 sm:p-8 border border-white/[0.1] bg-[#1F2227] hover:border-[#C8A45D]/50 transition-all duration-500 flex flex-col justify-between md:col-span-2 lg:col-span-1"
           >
             <div className="space-y-4">
               <div className="flex items-center justify-between pb-4 border-b border-white/[0.08]">
-                <div className="p-3 border border-white/10 bg-[#181818] group-hover:border-[#C8A45D]/40 transition-colors">
+                <div className="p-3 border border-white/10 bg-[#25282D] group-hover:border-[#C8A45D]/40 transition-colors">
                   <Phone className="w-5 h-5 text-[#C8A45D]" />
                 </div>
                 <span className="text-[10px] font-display uppercase tracking-widest text-[#C8A45D] font-bold">
@@ -145,7 +144,7 @@ export function Contact() {
               </div>
 
               <div>
-                <span className="text-xs font-display uppercase tracking-wider text-[#A3A3A3] font-semibold block">
+                <span className="text-xs font-display uppercase tracking-wider text-[#B4B8BF] font-semibold block">
                   Direct Line
                 </span>
                 <h3 className="text-xl font-display uppercase tracking-tight text-white font-bold mt-1">
@@ -153,7 +152,7 @@ export function Contact() {
                 </h3>
               </div>
 
-              <p className="text-xs text-[#A3A3A3] font-light leading-relaxed">
+              <p className="text-xs text-[#B4B8BF] font-light leading-relaxed">
                 Direct phone consultations for active professional players, club scouts, and authorized sporting directors.
               </p>
             </div>
@@ -176,14 +175,14 @@ export function Contact() {
         </div>
 
         {/* Global Operations & Discretion Protocol Banner */}
-        <div className="mt-12 p-6 border border-white/[0.08] bg-[#0d0d0d] max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div className="mt-12 p-6 border border-white/[0.08] bg-[#181A1E] max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <div className="flex items-center gap-3">
             <Globe className="w-5 h-5 text-[#C8A45D] shrink-0" />
             <div>
               <span className="text-xs font-display uppercase tracking-wider text-white font-bold block">
                 {siteConfig.location.country} • {siteConfig.location.scope}
               </span>
-              <span className="text-xs text-[#A3A3A3] font-light">
+              <span className="text-xs text-[#B4B8BF] font-light">
                 Representing footballers across domestic divisions and global leagues.
               </span>
             </div>

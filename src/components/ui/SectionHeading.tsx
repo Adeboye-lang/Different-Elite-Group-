@@ -48,7 +48,7 @@ export function SectionHeading({
           <span className="text-xs uppercase tracking-[0.24em] text-[#C8A45D] font-display font-semibold">
             {label}
           </span>
-          <span className="w-10 h-[1px] bg-[#393939]" />
+          <span className="w-10 h-[1px] bg-[#41454C]" />
         </div>
       )}
 
@@ -57,7 +57,7 @@ export function SectionHeading({
       </h2>
 
       {subtitle && (
-        <p className="text-sm md:text-base lg:text-lg text-[#A3A3A3] leading-relaxed max-w-2xl font-light">
+        <p className="text-sm md:text-base lg:text-lg text-[#B4B8BF] leading-relaxed max-w-2xl font-light">
           {subtitle}
         </p>
       )}

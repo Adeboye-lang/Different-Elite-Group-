@@ -52,8 +52,8 @@ export function ContactForm() {
   };
 
   return (
-    <div className="relative p-8 md:p-10 border border-white/[0.12] bg-[#121212] overflow-hidden">
-      {/* Top Gold Edge Accent */}
+    <div className="relative p-8 md:p-10 border border-white/[0.12] bg-[#1F2227] overflow-hidden">
+      {/* Top accent edge */}
       <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#C8A45D]" />
 
       {/* Success Notification Banner */}
@@ -99,7 +99,7 @@ export function ContactForm() {
               required: "Full name is required.",
               minLength: { value: 2, message: "Name must be at least 2 characters." },
             })}
-            className={`w-full px-4 py-3 bg-[#181818] border text-sm text-white placeholder-white/20 focus:outline-none focus:ring-1 transition-colors ${
+            className={`w-full px-4 py-3 bg-[#25282D] border text-sm text-white placeholder-white/20 focus:outline-none focus:ring-1 transition-colors ${
               errors.fullName
                 ? "border-red-500/60 focus:ring-red-500"
                 : "border-white/10 focus:border-[#C8A45D] focus:ring-[#C8A45D]"
@@ -129,7 +129,7 @@ export function ContactForm() {
                 message: "Please enter a valid email address.",
               },
             })}
-            className={`w-full px-4 py-3 bg-[#181818] border text-sm text-white placeholder-white/20 focus:outline-none focus:ring-1 transition-colors ${
+            className={`w-full px-4 py-3 bg-[#25282D] border text-sm text-white placeholder-white/20 focus:outline-none focus:ring-1 transition-colors ${
               errors.email
                 ? "border-red-500/60 focus:ring-red-500"
                 : "border-white/10 focus:border-[#C8A45D] focus:ring-[#C8A45D]"
@@ -156,7 +156,7 @@ export function ContactForm() {
               required: "Subject is required.",
               minLength: { value: 3, message: "Subject must be at least 3 characters." },
             })}
-            className={`w-full px-4 py-3 bg-[#181818] border text-sm text-white placeholder-white/20 focus:outline-none focus:ring-1 transition-colors ${
+            className={`w-full px-4 py-3 bg-[#25282D] border text-sm text-white placeholder-white/20 focus:outline-none focus:ring-1 transition-colors ${
               errors.subject
                 ? "border-red-500/60 focus:ring-red-500"
                 : "border-white/10 focus:border-[#C8A45D] focus:ring-[#C8A45D]"
@@ -186,7 +186,7 @@ export function ContactForm() {
                 message: "Message must be at least 15 characters long.",
               },
             })}
-            className={`w-full px-4 py-3 bg-[#181818] border text-sm text-white placeholder-white/20 focus:outline-none focus:ring-1 transition-colors resize-none ${
+            className={`w-full px-4 py-3 bg-[#25282D] border text-sm text-white placeholder-white/20 focus:outline-none focus:ring-1 transition-colors resize-none ${
               errors.message
                 ? "border-red-500/60 focus:ring-red-500"
                 : "border-white/10 focus:border-[#C8A45D] focus:ring-[#C8A45D]"
@@ -201,7 +201,7 @@ export function ContactForm() {
         <div className="pt-2">
           <Button
             type="submit"
-            variant="gold"
+            variant="accent"
             size="lg"
             className="w-full"
             disabled={submissionState.status === "submitting"}
@@ -220,7 +220,7 @@ export function ContactForm() {
         </div>
 
         {/* Confidentiality Assurance */}
-        <p className="text-[10px] text-[#737373] text-center font-light pt-2">
+        <p className="text-[10px] text-[#8A8E96] text-center font-light pt-2">
           All submissions are handled under strict confidentiality by the executive management of Different Elite Group.
         </p>
       </form>

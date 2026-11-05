@@ -11,7 +11,7 @@ export function About() {
   return (
     <section
       id="about"
-      className="relative py-28 md:py-36 bg-[#0e0e0e] border-t border-white/[0.08] overflow-hidden"
+      className="relative py-28 md:py-36 bg-[#191B1F] border-t border-white/[0.08] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -38,7 +38,7 @@ export function About() {
 
             {/* Quote Badge */}
             <div className="relative max-w-md mx-auto -mt-10 px-4 sm:px-6">
-              <div className="p-5 bg-[#0a0a0a]/95 border border-[#C8A45D]/40">
+              <div className="p-5 bg-[#16181C]/95 border border-[#C8A45D]/40">
                 <Quote className="w-5 h-5 text-[#C8A45D] mb-2 opacity-90" />
                 <p className="text-sm font-light text-white leading-relaxed italic">
                   {siteConfig.quotes.aboutFeature1}
@@ -62,7 +62,7 @@ export function About() {
             className="lg:col-span-7 space-y-8"
           >
             {/* Primary Paragraphs */}
-            <div className="space-y-6 text-[#A3A3A3] font-light text-base md:text-lg leading-relaxed">
+            <div className="space-y-6 text-[#B4B8BF] font-light text-base md:text-lg leading-relaxed">
               <p className="text-white text-lg md:text-xl font-normal leading-relaxed border-l-2 border-[#C8A45D] pl-6 py-1">
                 We believe that every player has a unique journey, and with the right guidance, opportunities and support, they can unlock their true potential both on and off the pitch.
               </p>
@@ -81,7 +81,7 @@ export function About() {
             </div>
 
             {/* Featured Pull Quote Block */}
-            <div className="p-6 md:p-8 border border-white/[0.1] bg-[#121212] relative overflow-hidden">
+            <div className="p-6 md:p-8 border border-white/[0.1] bg-[#1F2227] relative overflow-hidden">
               <div className="flex items-start gap-4">
                 <div className="p-3 border border-[#C8A45D]/40 bg-[#C8A45D]/10 shrink-0">
                   <Trophy className="w-5 h-5 text-[#C8A45D]" />
@@ -99,26 +99,26 @@ export function About() {
 
             {/* Two Pillar Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="p-6 border border-white/[0.08] bg-[#121212] space-y-2">
+              <div className="p-6 border border-white/[0.08] bg-[#1F2227] space-y-2">
                 <span className="text-xs uppercase font-display tracking-widest text-[#C8A45D] font-bold">
                   01 / BESPOKE GUIDANCE
                 </span>
                 <h4 className="text-base font-display uppercase tracking-wider text-white font-bold">
                   Individual Attention
                 </h4>
-                <p className="text-xs text-[#A3A3A3] leading-relaxed font-light">
+                <p className="text-xs text-[#B4B8BF] leading-relaxed font-light">
                   Tailored development programs recognizing unique attributes, technical strengths, and personal aspirations.
                 </p>
               </div>
 
-              <div className="p-6 border border-white/[0.08] bg-[#121212] space-y-2">
+              <div className="p-6 border border-white/[0.08] bg-[#1F2227] space-y-2">
                 <span className="text-xs uppercase font-display tracking-widest text-[#C8A45D] font-bold">
                   02 / UNCOMPROMISING ETHICS
                 </span>
                 <h4 className="text-base font-display uppercase tracking-wider text-white font-bold">
                   Elite Standards
                 </h4>
-                <p className="text-xs text-[#A3A3A3] leading-relaxed font-light">
+                <p className="text-xs text-[#B4B8BF] leading-relaxed font-light">
                   Uncompromising integrity, candid career stewardship, and transparent football governance.
                 </p>
               </div>

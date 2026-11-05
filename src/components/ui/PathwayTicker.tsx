@@ -16,7 +16,7 @@ export function PathwayTicker() {
   const items = [...stages, ...stages];
 
   return (
-    <div className="relative bg-[#C8A45D] text-[#080808] overflow-hidden border-y border-[#8F7236]">
+    <div className="relative bg-[#C8A45D] text-[#14161A] overflow-hidden border-y border-[#8F7236]">
       <div className="flex w-max animate-ticker py-3.5" aria-hidden="true">
         {items.map((stage, idx) => (
           <span

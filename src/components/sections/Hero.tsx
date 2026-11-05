@@ -12,12 +12,12 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen pt-36 pb-20 lg:pt-40 lg:pb-28 flex flex-col justify-center bg-[#0a0a0a] overflow-hidden"
+      className="relative min-h-screen pt-36 pb-20 lg:pt-40 lg:pb-28 flex flex-col justify-center bg-[#16181C] overflow-hidden"
     >
       {/* Pitch markings & mown stripes */}
       <div className="absolute inset-0 pitch-stripes pointer-events-none" />
       <PitchLines className="absolute inset-0 w-full h-full text-white/[0.05]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#16181C] via-transparent to-[#16181C] pointer-events-none" />
 
 
       {/* Expansive Wide Container */}
@@ -40,14 +40,14 @@ export function Hero() {
             </h1>
 
             {/* Supporting Statement */}
-            <p className="text-base sm:text-lg md:text-xl font-light text-[#A3A3A3] leading-relaxed max-w-2xl">
+            <p className="text-base sm:text-lg md:text-xl font-light text-[#B4B8BF] leading-relaxed max-w-2xl">
               {siteConfig.supportingStatement}
             </p>
 
             {/* Action CTAs */}
             <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
               <Button
-                variant="gold"
+                variant="accent"
                 size="lg"
                 href="#contact"
                 icon={<ArrowRight className="w-4 h-4" />}

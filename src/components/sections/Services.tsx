@@ -19,7 +19,7 @@ export function Services() {
   return (
     <section
       id="services"
-      className="relative py-28 md:py-36 bg-[#0c0c0c] border-t border-white/[0.08] overflow-hidden"
+      className="relative py-28 md:py-36 bg-[#17191D] border-t border-white/[0.08] overflow-hidden"
     >
       <div className="absolute inset-0 pitch-stripes pointer-events-none" />
 
@@ -50,16 +50,16 @@ export function Services() {
                   onClick={() => setActiveServiceId(service.id)}
                   className={`w-full text-left p-4 transition-all duration-300 relative group flex items-start justify-between cursor-pointer border ${
                     isActive
-                      ? "bg-[#161616] border-[#C8A45D]/50 text-white"
-                      : "bg-transparent border-transparent text-[#A3A3A3] hover:text-white hover:bg-white/[0.02]"
+                      ? "bg-[#23262B] border-[#C8A45D]/50 text-white"
+                      : "bg-transparent border-transparent text-[#B4B8BF] hover:text-white hover:bg-white/[0.02]"
                   }`}
                 >
                   <div className="flex items-start gap-4">
                     <span
                       className={`flex items-center justify-center w-9 h-9 shrink-0 text-base font-display font-extrabold transition-colors duration-300 ${
                         isActive
-                          ? "bg-[#C8A45D] text-[#080808]"
-                          : "border border-white/10 text-[#666666] group-hover:text-white group-hover:border-white/30"
+                          ? "bg-[#C8A45D] text-[#14161A]"
+                          : "border border-white/10 text-[#868A92] group-hover:text-white group-hover:border-white/30"
                       }`}
                     >
                       {service.number}
@@ -72,7 +72,7 @@ export function Services() {
                       >
                         {service.title}
                       </h3>
-                      <span className="text-[10px] uppercase tracking-widest text-[#666666] font-medium mt-1 block">
+                      <span className="text-[10px] uppercase tracking-widest text-[#868A92] font-medium mt-1 block">
                         {service.tag}
                       </span>
                     </div>
@@ -106,7 +106,7 @@ export function Services() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.35, ease: "easeOut" }}
-                className="p-8 lg:p-10 border border-white/[0.14] bg-[#121212] relative overflow-hidden"
+                className="p-8 lg:p-10 border border-white/[0.14] bg-[#1F2227] relative overflow-hidden"
               >
                 {/* Dossier Header */}
                 <div className="flex items-center justify-between border-b border-white/[0.08] pb-6 mb-8">
@@ -128,7 +128,7 @@ export function Services() {
                 <h3 className="text-3xl font-display font-extrabold text-[#F5F5F5] uppercase tracking-tight leading-tight mb-4">
                   {activeService.title}
                 </h3>
-                <p className="text-sm sm:text-base text-[#A3A3A3] font-light leading-relaxed mb-8">
+                <p className="text-sm sm:text-base text-[#B4B8BF] font-light leading-relaxed mb-8">
                   {activeService.shortDesc}
                 </p>
 
@@ -141,7 +141,7 @@ export function Services() {
                     {activeService.points.map((pt, i) => (
                       <div
                         key={i}
-                        className="flex items-start gap-3 p-3.5 border border-white/[0.06] bg-[#161616]/70 hover:border-white/15 transition-colors"
+                        className="flex items-start gap-3 p-3.5 border border-white/[0.06] bg-[#23262B]/70 hover:border-white/15 transition-colors"
                       >
                         <div className="p-1 border border-[#C8A45D]/40 bg-[#C8A45D]/10 text-[#C8A45D] shrink-0 mt-0.5">
                           <Check className="w-3.5 h-3.5" />
@@ -155,20 +155,20 @@ export function Services() {
                 </div>
 
                 {/* Regulatory Disclaimer Note */}
-                <p className="text-[11px] text-[#666666] italic font-light border-t border-white/[0.06] pt-4 mb-6 leading-relaxed">
+                <p className="text-[11px] text-[#868A92] italic font-light border-t border-white/[0.06] pt-4 mb-6 leading-relaxed">
                   * Note: Our approach includes guidance tailored to individual player stages. Contract discussions and club representations are conducted where appropriately authorised, registered and licensed in accordance with applicable football governing regulations.
                 </p>
 
                 {/* Action CTA */}
                 <div className="flex items-center justify-between pt-2">
                   <Button
-                    variant="gold"
+                    variant="accent"
                     size="md"
                     href="#contact"
                   >
                     Enquire Regarding Pathway
                   </Button>
-                  <span className="text-xs uppercase font-display tracking-widest text-[#A3A3A3] font-semibold">
+                  <span className="text-xs uppercase font-display tracking-widest text-[#B4B8BF] font-semibold">
                     UNITED KINGDOM • WORLDWIDE
                   </span>
                 </div>
@@ -184,7 +184,7 @@ export function Services() {
             return (
               <div
                 key={service.id}
-                className="border border-white/[0.1] bg-[#121212] overflow-hidden"
+                className="border border-white/[0.1] bg-[#1F2227] overflow-hidden"
               >
                 <button
                   onClick={() =>
@@ -200,7 +200,7 @@ export function Services() {
                       <h3 className="text-base uppercase font-display tracking-wide text-white font-bold">
                         {service.title}
                       </h3>
-                      <span className="text-[10px] uppercase tracking-widest text-[#666666] font-medium mt-1 block">
+                      <span className="text-[10px] uppercase tracking-widest text-[#868A92] font-medium mt-1 block">
                         {service.tag}
                       </span>
                     </div>
@@ -221,7 +221,7 @@ export function Services() {
                       transition={{ duration: 0.3 }}
                       className="px-5 pb-6 border-t border-white/[0.06] pt-4 space-y-4"
                     >
-                      <p className="text-xs text-[#A3A3A3] leading-relaxed font-light">
+                      <p className="text-xs text-[#B4B8BF] leading-relaxed font-light">
                         {service.shortDesc}
                       </p>
 
@@ -236,7 +236,7 @@ export function Services() {
 
                       <div className="pt-2">
                         <Button
-                          variant="gold"
+                          variant="accent"
                           size="sm"
                           href="#contact"
                           className="w-full"

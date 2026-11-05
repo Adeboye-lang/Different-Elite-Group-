@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { Shield, HeartHandshake, Scale, TrendingUp, KeyRound } from "lucide-react";
 import { siteConfig } from "@/src/config/site";
@@ -19,7 +20,7 @@ export function Approach() {
   return (
     <section
       id="approach"
-      className="relative py-28 md:py-36 bg-[#0e0e0e] border-t border-white/[0.08] overflow-hidden"
+      className="relative py-28 md:py-36 bg-[#191B1F] border-t border-white/[0.08] overflow-hidden"
     >
       <PitchLines className="absolute inset-0 w-full h-full text-white/[0.03]" />
 
@@ -45,7 +46,7 @@ export function Approach() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`group relative p-8 border border-white/[0.1] bg-[#121212] hover:border-[#C8A45D]/50 transition-all duration-500 overflow-hidden ${
+                className={`group relative p-8 border border-white/[0.1] bg-[#1F2227] hover:border-[#C8A45D]/50 transition-all duration-500 overflow-hidden ${
                   isWide ? "lg:col-span-1" : ""
                 }`}
               >
@@ -55,13 +56,13 @@ export function Approach() {
                   <span className="kit-number text-7xl transition-colors duration-500 group-hover:text-[#C8A45D]/15">
                     {val.number}
                   </span>
-                  <div className="p-3 border border-white/10 bg-[#161616] group-hover:border-[#C8A45D]/40 transition-colors">
+                  <div className="p-3 border border-white/10 bg-[#23262B] group-hover:border-[#C8A45D]/40 transition-colors">
                     {valueIcons[val.name]}
                   </div>
                 </div>
 
                 {/* Principle Tag */}
-                <span className="text-xs uppercase font-display tracking-[0.2em] text-[#666666] font-semibold block mb-2">
+                <span className="text-xs uppercase font-display tracking-[0.2em] text-[#868A92] font-semibold block mb-2">
                   {val.principle}
                 </span>
 
@@ -71,7 +72,7 @@ export function Approach() {
                 </h3>
 
                 {/* Description */}
-                <p className="text-sm text-[#A3A3A3] font-light leading-relaxed">
+                <p className="text-sm text-[#B4B8BF] font-light leading-relaxed">
                   {val.description}
                 </p>
 
@@ -87,9 +88,20 @@ export function Approach() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="p-8 border border-[#C8A45D]/30 bg-[#121212] flex flex-col justify-between relative overflow-hidden"
+            className="p-8 min-h-[340px] border border-[#C8A45D]/30 bg-[#1F2227] flex flex-col justify-between relative overflow-hidden"
           >
-            <div className="space-y-4">
+            {/* Handshake photo: the agreement behind "Our Commitment" */}
+            <Image
+              src="/images/handshake.jpg"
+              alt="Agent and player shaking hands on an agreement"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover object-center grayscale"
+            />
+            <div className="absolute inset-0 bg-[#14161A]/65" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#14161A]/80 via-transparent to-[#14161A]/90" />
+
+            <div className="relative space-y-4">
               <span className="text-xs uppercase font-display tracking-[0.24em] text-[#C8A45D] font-bold block">
                 THE DEG STANDARD
               </span>
@@ -99,7 +111,7 @@ export function Approach() {
               </h3>
             </div>
 
-            <p className="text-xs text-[#A3A3A3] font-light leading-relaxed pt-6 border-t border-white/[0.08]">
+            <p className="relative text-xs text-[#D4D4D4] font-light leading-relaxed pt-6 border-t border-white/[0.12]">
               Operating from the United Kingdom with global reach, we adhere to the highest codes of professional player representation.
             </p>
           </motion.div>

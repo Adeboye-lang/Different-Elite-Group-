@@ -14,18 +14,18 @@ export function BrandStatement() {
   ];
 
   return (
-    <section className="relative py-32 md:py-44 bg-[#080808] border-t border-white/[0.08] overflow-hidden flex items-center justify-center">
-      {/* Background Cinematic Pitch Visual with Deep Vignette */}
-      <div className="absolute inset-0 opacity-20 filter grayscale contrast-125 mix-blend-luminosity pointer-events-none">
+    <section className="relative py-32 md:py-44 bg-[#14161A] border-t border-white/[0.08] overflow-hidden flex items-center justify-center">
+      {/* Floodlit stadium background */}
+      <div className="absolute inset-0 pointer-events-none">
         <Image
           src="/images/pathway-pitch.jpg"
-          alt="Majestic floodlit football pitch under dusk"
+          alt="Floodlit football stadium on matchday"
           fill
           sizes="100vw"
-          className="object-cover object-center"
+          className="object-cover object-center opacity-55"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/75 to-[#080808]" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-transparent to-[#080808]" />
+        <div className="absolute inset-0 bg-[#14161A]/50" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#14161A] via-transparent to-[#14161A]" />
       </div>
 
 
@@ -74,7 +74,7 @@ export function BrandStatement() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="pt-8 border-t border-white/[0.08] max-w-lg mx-auto"
         >
-          <p className="text-xs sm:text-sm uppercase font-display tracking-[0.24em] text-[#A3A3A3] font-bold">
+          <p className="text-xs sm:text-sm uppercase font-display tracking-[0.24em] text-[#B4B8BF] font-bold">
             {siteConfig.brandStatements[0]}
           </p>
         </motion.div>

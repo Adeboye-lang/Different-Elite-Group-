@@ -15,14 +15,14 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#080808] border-t border-white/[0.08] text-[#A3A3A3] pt-20 pb-12 overflow-hidden">
+    <footer className="relative bg-[#14161A] border-t border-white/[0.08] text-[#B4B8BF] pt-20 pb-12 overflow-hidden">
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-16 border-b border-white/[0.06]">
           {/* Col 1 & 2: Brand Identity & Vision */}
           <div className="lg:col-span-2 space-y-6">
             <Logo />
-            <p className="text-sm font-light leading-relaxed max-w-sm text-[#A3A3A3]">
+            <p className="text-sm font-light leading-relaxed max-w-sm text-[#B4B8BF]">
               {siteConfig.name} is a premier international football agency operating from the United Kingdom to create meaningful career pathways for exceptional talent across worldwide football.
             </p>
             <div className="pt-2">
@@ -102,7 +102,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar: Copyright & Compliance */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#666666]">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#868A92]">
           <div>
             <p>
               © {currentYear} {siteConfig.name}. All rights reserved. United Kingdom.

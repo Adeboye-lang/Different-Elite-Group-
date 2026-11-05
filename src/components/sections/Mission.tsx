@@ -29,17 +29,19 @@ export function Mission() {
   return (
     <section
       id="mission"
-      className="relative py-28 md:py-36 bg-[#080808] border-t border-white/[0.08] overflow-hidden"
+      className="relative py-28 md:py-36 bg-[#14161A] border-t border-white/[0.08] overflow-hidden"
     >
-      {/* Background Architectural Stadium Tunnel View */}
-      <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-luminosity">
+      {/* Coach with a youth team, darkest behind the text column */}
+      <div className="absolute inset-0 pointer-events-none">
         <Image
-          src="/images/stadium-tunnel.jpg"
-          alt="Stadium tunnel leading out to match pitch"
+          src="/images/youth-coaching.jpg"
+          alt="Coach talking with a group of young footballers"
           fill
-          className="object-cover object-center"
+          sizes="100vw"
+          className="object-cover object-center grayscale"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#080808] via-[#080808]/85 to-[#080808]" />
+        <div className="absolute inset-0 bg-[#14161A]/45" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#14161A]/95 via-[#14161A]/70 to-[#14161A]/10" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,7 +61,7 @@ export function Mission() {
               subtitle="Our mission is to create meaningful pathways for footballers to reach their highest potential through professional guidance, career development, opportunities and ongoing personal support."
             />
 
-            <div className="space-y-6 text-[#A3A3A3] font-light text-base md:text-lg leading-relaxed">
+            <div className="space-y-6 text-[#B4B8BF] font-light text-base md:text-lg leading-relaxed">
               <p>
                 We aim to support players at every stage of their football journey, from promising young talents taking their first steps towards professional football to established players looking to progress to the next level.
               </p>
@@ -102,7 +104,7 @@ export function Mission() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5 space-y-4"
           >
-            <div className="p-8 border border-white/[0.14] bg-[#121212]/95 relative overflow-hidden">
+            <div className="p-8 border border-white/[0.14] bg-[#1F2227]/95 relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#C8A45D]" />
 
               <div className="flex items-center justify-between pb-6 mb-6 border-b border-white/[0.08]">
@@ -117,14 +119,14 @@ export function Mission() {
               <div className="space-y-6">
                 {missionPillars.map((pillar, idx) => (
                   <div key={idx} className="group flex gap-4 items-start">
-                    <div className="p-3 border border-white/10 bg-[#161616] group-hover:border-[#C8A45D]/50 transition-colors shrink-0">
+                    <div className="p-3 border border-white/10 bg-[#23262B] group-hover:border-[#C8A45D]/50 transition-colors shrink-0">
                       {pillar.icon}
                     </div>
                     <div className="space-y-1">
                       <h4 className="text-base font-display uppercase tracking-wide text-white font-bold group-hover:text-[#C8A45D] transition-colors">
                         {pillar.title}
                       </h4>
-                      <p className="text-xs text-[#A3A3A3] leading-relaxed font-light">
+                      <p className="text-xs text-[#B4B8BF] leading-relaxed font-light">
                         {pillar.desc}
                       </p>
                     </div>

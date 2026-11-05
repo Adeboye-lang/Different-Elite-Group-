@@ -33,7 +33,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-50 bg-[#080808] flex flex-col justify-between p-6 md:p-10 lg:hidden"
+          className="fixed inset-0 z-50 bg-[#14161A] flex flex-col justify-between p-6 md:p-10 lg:hidden"
         >
           {/* Header row inside mobile menu */}
           <div className="flex items-center justify-between border-b border-white/10 pb-6">
@@ -78,7 +78,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
           {/* Mobile Footer Information */}
           <div className="border-t border-white/10 pt-6 space-y-4">
-            <div className="flex flex-col gap-2.5 text-xs text-[#A3A3A3] font-light">
+            <div className="flex flex-col gap-2.5 text-xs text-[#B4B8BF] font-light">
               <div className="flex items-center gap-2.5">
                 <Globe className="w-4 h-4 text-[#C8A45D]" />
                 <span className="font-display uppercase tracking-wider text-white">
@@ -110,7 +110,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               </div>
             </div>
 
-            <p className="text-[10px] uppercase tracking-[0.2em] text-[#666666] font-display font-medium pt-2">
+            <p className="text-[10px] uppercase tracking-[0.2em] text-[#868A92] font-display font-medium pt-2">
               {siteConfig.brandStatements[0]}
             </p>
           </div>

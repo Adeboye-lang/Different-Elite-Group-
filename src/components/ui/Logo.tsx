@@ -21,7 +21,7 @@ export function Logo({ className = "", showSubtitle = true }: LogoProps) {
       >
         <path
           d="M20 1.5 L38 7 V22 C38 33 30 40.5 20 44.5 C10 40.5 2 33 2 22 V7 Z"
-          fill="#0e0e0e"
+          fill="#191B1F"
           stroke="#C8A45D"
           strokeWidth="1.5"
         />
@@ -53,7 +53,7 @@ export function Logo({ className = "", showSubtitle = true }: LogoProps) {
           <span className="text-[#C8A45D]"> {siteConfig.name.split(" ").slice(2).join(" ")}</span>
         </span>
         {showSubtitle && (
-          <span className="text-[8.5px] uppercase tracking-[0.32em] text-[#A5A5A5] font-light mt-1.5">
+          <span className="text-[8.5px] uppercase tracking-[0.32em] text-[#B4B8BF] font-light mt-1.5">
             Football Agency • Est. UK
           </span>
         )}
