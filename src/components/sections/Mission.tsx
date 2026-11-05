@@ -31,17 +31,17 @@ export function Mission() {
       id="mission"
       className="relative py-28 md:py-36 bg-[#14161A] border-t border-white/[0.08] overflow-hidden"
     >
-      {/* Coach with a youth team, darkest behind the text column */}
+      {/* Player volleying against the sky, darkest behind the text column */}
       <div className="absolute inset-0 pointer-events-none">
         <Image
-          src="/images/youth-coaching.jpg"
-          alt="Coach talking with a group of young footballers"
+          src="/images/player-volley.jpg"
+          alt="Footballer striking a volley"
           fill
           sizes="100vw"
-          className="object-cover object-center grayscale"
+          className="object-cover object-[center_45%] grayscale -scale-x-100"
         />
-        <div className="absolute inset-0 bg-[#14161A]/45" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#14161A]/95 via-[#14161A]/70 to-[#14161A]/10" />
+        <div className="absolute inset-0 bg-[#14161A]/50 lg:bg-[#14161A]/20" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#14161A]/90 via-[#14161A]/45 to-transparent" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,13 +55,14 @@ export function Mission() {
             className="lg:col-span-7 space-y-8"
           >
             <SectionHeading
+              className="[&_p]:text-[#DADDE2]"
               label="02 / PURPOSE & MISSION"
               title="Building More Than Football Careers."
               accentText="Careers."
               subtitle="Our mission is to create meaningful pathways for footballers to reach their highest potential through professional guidance, career development, opportunities and ongoing personal support."
             />
 
-            <div className="space-y-6 text-[#B4B8BF] font-light text-base md:text-lg leading-relaxed">
+            <div className="space-y-6 text-[#DADDE2] font-light text-base md:text-lg leading-relaxed">
               <p>
                 We aim to support players at every stage of their football journey, from promising young talents taking their first steps towards professional football to established players looking to progress to the next level.
               </p>
