@@ -28,7 +28,7 @@ export function SectionHeading({
     return (
       <>
         {parts[0]}
-        <span className="gold-gradient-text">{accentText}</span>
+        <span className="text-[#C8A45D]">{accentText}</span>
         {parts[1]}
       </>
     );
@@ -44,7 +44,7 @@ export function SectionHeading({
     >
       {label && (
         <div className="flex items-center gap-2.5">
-          <span className="w-2 h-2 rounded-full bg-[#C8A45D] shadow-[0_0_8px_#C8A45D]" />
+          <span className="w-2 h-2 rounded-full bg-[#C8A45D]" />
           <span className="text-xs uppercase tracking-[0.24em] text-[#C8A45D] font-display font-semibold">
             {label}
           </span>

@@ -19,7 +19,7 @@ export function TacticsBoard() {
     .join(" ");
 
   return (
-    <div className="relative aspect-[3/4] w-full max-w-md mx-auto overflow-hidden border border-white/[0.14] bg-gradient-to-b from-[#0f1410] to-[#0a0c0a] tunnel-shadow">
+    <div className="relative aspect-[3/4] w-full max-w-md mx-auto overflow-hidden border border-white/[0.14] bg-[#0c100d]">
       {/* Grass stripes */}
       <div
         className="absolute inset-0"
@@ -71,7 +71,7 @@ export function TacticsBoard() {
             <span
               className={`flex items-center justify-center w-9 h-9 rounded-full font-display font-extrabold text-sm ${
                 isFinal
-                  ? "bg-[#C8A45D] text-[#080808] shadow-[0_0_24px_rgba(200,164,93,0.6)]"
+                  ? "bg-[#C8A45D] text-[#080808]"
                   : "bg-[#080808] text-[#C8A45D] border-2 border-[#C8A45D]"
               }`}
             >
@@ -94,8 +94,6 @@ export function TacticsBoard() {
         </span>
       </div>
 
-      {/* Bottom vignette */}
-      <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#080808] to-transparent pointer-events-none" />
     </div>
   );
 }

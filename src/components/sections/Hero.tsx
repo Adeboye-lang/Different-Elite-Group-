@@ -8,13 +8,6 @@ import { Button } from "@/src/components/ui/Button";
 import { HeroArtwork } from "@/src/components/ui/HeroArtwork";
 import { PitchLines } from "@/src/components/ui/PitchLines";
 
-const heroStats = [
-  { label: "Based In", value: "UK" },
-  { label: "Reach", value: "Global" },
-  { label: "Services", value: `0${siteConfig.services.length}` },
-  { label: "Focus", value: "Player 1st" },
-];
-
 export function Hero() {
   return (
     <section
@@ -26,12 +19,9 @@ export function Hero() {
       <PitchLines className="absolute inset-0 w-full h-full text-white/[0.05]" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0a] via-transparent to-[#0a0a0a] pointer-events-none" />
 
-      {/* Ambient pitch lighting */}
-      <div className="absolute top-1/4 left-1/4 w-[36rem] h-[36rem] bg-[#C8A45D]/5 rounded-full blur-[160px] pointer-events-none" />
-      <div className="absolute bottom-10 right-1/4 w-[40rem] h-[40rem] bg-white/[0.02] rounded-full blur-[180px] pointer-events-none" />
 
       {/* Expansive Wide Container */}
-      <div className="w-full max-w-[1520px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-20">
+      <div className="relative w-full max-w-[1520px] mx-auto px-6 sm:px-10 lg:px-14 xl:px-20">
         {/* Expansive 2-Column Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 xl:gap-20 items-center">
           {/* Left Column: Bold Editorial Headlines & Action CTAs */}
@@ -45,7 +35,7 @@ export function Hero() {
             <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-display font-extrabold tracking-tight text-[#F5F5F5] uppercase leading-[0.9]">
               MORE THAN AN <br />
               <span className="text-white">AGENCY.</span> <br />
-              A <span className="gold-gradient-text">PATHWAY</span> TO <br />
+              A <span className="text-[#C8A45D]">PATHWAY</span> TO <br />
               YOUR FUTURE.
             </h1>
 
@@ -72,25 +62,6 @@ export function Hero() {
                 Discover DEG
               </Button>
             </div>
-
-            {/* Scoreboard Strip */}
-            <dl className="mt-4 grid grid-cols-2 sm:grid-cols-4 max-w-2xl border border-white/[0.1] bg-[#080808]/70 backdrop-blur-sm">
-              {heroStats.map((stat, idx) => (
-                <div
-                  key={stat.label}
-                  className={`px-4 py-4 border-white/[0.08] ${idx % 2 === 1 ? "border-l" : ""} ${
-                    idx === 2 ? "sm:border-l" : ""
-                  } ${idx >= 2 ? "border-t sm:border-t-0" : ""}`}
-                >
-                  <dt className="text-[10px] uppercase tracking-[0.22em] text-[#A3A3A3] font-display font-semibold">
-                    {stat.label}
-                  </dt>
-                  <dd className="text-2xl sm:text-3xl font-display font-extrabold text-white uppercase leading-none mt-1.5">
-                    {stat.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
           </motion.div>
 
           {/* Right Column: Hero Visual Artwork */}

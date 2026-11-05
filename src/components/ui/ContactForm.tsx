@@ -52,9 +52,9 @@ export function ContactForm() {
   };
 
   return (
-    <div className="relative p-8 md:p-10 border border-white/[0.12] bg-[#121212] overflow-hidden shadow-2xl">
+    <div className="relative p-8 md:p-10 border border-white/[0.12] bg-[#121212] overflow-hidden">
       {/* Top Gold Edge Accent */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C8A45D] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#C8A45D]" />
 
       {/* Success Notification Banner */}
       {submissionState.status === "success" && (

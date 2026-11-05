@@ -14,8 +14,6 @@ export function Contact() {
       id="contact"
       className="relative py-28 md:py-36 bg-[#0a0a0a] border-t border-white/[0.08] overflow-hidden"
     >
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[40rem] h-[40rem] bg-[#C8A45D]/5 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}

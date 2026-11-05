@@ -38,7 +38,7 @@ export function About() {
 
             {/* Quote Badge */}
             <div className="relative max-w-md mx-auto -mt-10 px-4 sm:px-6">
-              <div className="p-5 bg-[#0a0a0a]/95 backdrop-blur-md border border-[#C8A45D]/40 shadow-2xl">
+              <div className="p-5 bg-[#0a0a0a]/95 border border-[#C8A45D]/40">
                 <Quote className="w-5 h-5 text-[#C8A45D] mb-2 opacity-90" />
                 <p className="text-sm font-light text-white leading-relaxed italic">
                   {siteConfig.quotes.aboutFeature1}
@@ -82,7 +82,6 @@ export function About() {
 
             {/* Featured Pull Quote Block */}
             <div className="p-6 md:p-8 border border-white/[0.1] bg-[#121212] relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-[#C8A45D]/10 rounded-full blur-2xl pointer-events-none" />
               <div className="flex items-start gap-4">
                 <div className="p-3 border border-[#C8A45D]/40 bg-[#C8A45D]/10 shrink-0">
                   <Trophy className="w-5 h-5 text-[#C8A45D]" />

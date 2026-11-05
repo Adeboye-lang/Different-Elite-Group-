@@ -49,8 +49,6 @@ export function Approach() {
                   isWide ? "lg:col-span-1" : ""
                 }`}
               >
-                {/* Subtle Hover Gradient */}
-                <div className="absolute inset-0 bg-gradient-to-br from-[#C8A45D]/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
                 {/* Top Row: Number & Icon */}
                 <div className="flex items-end justify-between pb-6 mb-6 border-b border-white/[0.06]">
@@ -89,7 +87,7 @@ export function Approach() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            className="p-8 border border-[#C8A45D]/30 bg-gradient-to-br from-[#161616] to-[#0c0c0c] flex flex-col justify-between relative overflow-hidden"
+            className="p-8 border border-[#C8A45D]/30 bg-[#121212] flex flex-col justify-between relative overflow-hidden"
           >
             <div className="space-y-4">
               <span className="text-xs uppercase font-display tracking-[0.24em] text-[#C8A45D] font-bold block">
@@ -97,7 +95,7 @@ export function Approach() {
               </span>
               <h3 className="text-2xl sm:text-3xl font-display font-extrabold text-white uppercase tracking-tight leading-tight">
                 “YOUR JOURNEY. <br />
-                <span className="gold-gradient-text">OUR COMMITMENT.”</span>
+                <span className="text-[#C8A45D]">OUR COMMITMENT.”</span>
               </h3>
             </div>
 

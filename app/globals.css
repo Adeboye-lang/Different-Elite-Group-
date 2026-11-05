@@ -62,27 +62,6 @@
   background: #C8A45D;
 }
 
-/* Gold Gradient Text */
-.gold-gradient-text {
-  background: linear-gradient(135deg, #FFFFFF 30%, #DFC27D 75%, #C8A45D 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.gold-glow {
-  box-shadow: 0 0 35px -8px rgba(200, 164, 93, 0.2);
-}
-
-.gold-border-glow {
-  border-color: rgba(200, 164, 93, 0.4);
-  box-shadow: 0 0 20px -5px rgba(200, 164, 93, 0.15);
-}
-
-/* Football Matchday Tunnel Shadow */
-.tunnel-shadow {
-  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.95);
-}
-
 /* Mown Grass Stripes */
 .pitch-stripes {
   background-image: repeating-linear-gradient(

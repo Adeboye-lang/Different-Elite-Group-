@@ -33,7 +33,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
-          className="fixed inset-0 z-50 bg-[#080808]/98 backdrop-blur-xl flex flex-col justify-between p-6 md:p-10 lg:hidden"
+          className="fixed inset-0 z-50 bg-[#080808] flex flex-col justify-between p-6 md:p-10 lg:hidden"
         >
           {/* Header row inside mobile menu */}
           <div className="flex items-center justify-between border-b border-white/10 pb-6">

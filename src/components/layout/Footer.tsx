@@ -16,8 +16,6 @@ export function Footer() {
 
   return (
     <footer className="relative bg-[#080808] border-t border-white/[0.08] text-[#A3A3A3] pt-20 pb-12 overflow-hidden">
-      {/* Decorative ambient metallic line */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-[#C8A45D]/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-16 border-b border-white/[0.06]">

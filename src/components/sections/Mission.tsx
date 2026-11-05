@@ -102,8 +102,8 @@ export function Mission() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5 space-y-4"
           >
-            <div className="p-8 border border-white/[0.14] bg-[#121212]/95 backdrop-blur-md relative overflow-hidden shadow-2xl">
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#C8A45D] to-transparent" />
+            <div className="p-8 border border-white/[0.14] bg-[#121212]/95 relative overflow-hidden">
+              <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#C8A45D]" />
 
               <div className="flex items-center justify-between pb-6 mb-6 border-b border-white/[0.08]">
                 <span className="text-xs uppercase font-display tracking-[0.24em] text-[#C8A45D] font-bold">

@@ -50,7 +50,7 @@ export function Services() {
                   onClick={() => setActiveServiceId(service.id)}
                   className={`w-full text-left p-4 transition-all duration-300 relative group flex items-start justify-between cursor-pointer border ${
                     isActive
-                      ? "bg-[#161616] border-[#C8A45D]/50 text-white shadow-[0_4px_20px_rgba(0,0,0,0.6)]"
+                      ? "bg-[#161616] border-[#C8A45D]/50 text-white"
                       : "bg-transparent border-transparent text-[#A3A3A3] hover:text-white hover:bg-white/[0.02]"
                   }`}
                 >
@@ -106,7 +106,7 @@ export function Services() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -15 }}
                 transition={{ duration: 0.35, ease: "easeOut" }}
-                className="p-8 lg:p-10 border border-white/[0.14] bg-[#121212] relative overflow-hidden shadow-2xl"
+                className="p-8 lg:p-10 border border-white/[0.14] bg-[#121212] relative overflow-hidden"
               >
                 {/* Dossier Header */}
                 <div className="flex items-center justify-between border-b border-white/[0.08] pb-6 mb-8">

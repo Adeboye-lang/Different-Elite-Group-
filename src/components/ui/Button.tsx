@@ -37,8 +37,8 @@ export function Button({
 
   const variantStyles = {
     primary:
-      "bg-[#151515] text-[#F5F5F5] border border-[#393939] hover:border-[#C8A45D] hover:bg-[#1a1a1a] hover:shadow-[0_0_20px_rgba(200,164,93,0.15)]",
-    gold: "bg-[#C8A45D] text-[#080808] font-semibold hover:bg-[#DFBF7A] hover:shadow-[0_0_25px_rgba(200,164,93,0.35)]",
+      "bg-[#151515] text-[#F5F5F5] border border-[#393939] hover:border-[#C8A45D] hover:bg-[#1a1a1a]",
+    gold: "bg-[#C8A45D] text-[#080808] font-semibold hover:bg-[#DFBF7A]",
     outline:
       "bg-transparent text-[#F5F5F5] border border-white/15 hover:border-white/40 hover:bg-white/[0.04]",
     ghost:

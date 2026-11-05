@@ -28,8 +28,6 @@ export function BrandStatement() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#080808] via-transparent to-[#080808]" />
       </div>
 
-      {/* Decorative Gold Ambient Radial Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[36rem] h-[36rem] bg-[#C8A45D]/[0.06] rounded-full blur-[140px] pointer-events-none" />
 
       {/* Content Container */}
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -41,11 +39,11 @@ export function BrandStatement() {
           transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-3 mb-8"
         >
-          <span className="w-2 h-2 rounded-full bg-[#C8A45D] shadow-[0_0_8px_#C8A45D]" />
+          <span className="w-2 h-2 rounded-full bg-[#C8A45D]" />
           <span className="text-xs uppercase font-display tracking-[0.3em] text-[#C8A45D] font-bold">
             THE DEG MANIFESTO
           </span>
-          <span className="w-2 h-2 rounded-full bg-[#C8A45D] shadow-[0_0_8px_#C8A45D]" />
+          <span className="w-2 h-2 rounded-full bg-[#C8A45D]" />
         </motion.div>
 
         {/* 4 Statement Lines in High-Impact Premier League / FC 27 Display Font */}
@@ -59,7 +57,7 @@ export function BrandStatement() {
               transition={{ duration: 0.7, delay: idx * 0.12 }}
               className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight uppercase leading-[0.95] ${
                 idx === 3
-                  ? "gold-gradient-text drop-shadow-[0_4px_25px_rgba(200,164,93,0.3)]"
+                  ? "text-[#C8A45D]"
                   : "text-[#F5F5F5]"
               }`}
             >

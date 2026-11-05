@@ -43,7 +43,7 @@ export function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
           isScrolled
-            ? "bg-[#0a0a0a]/95 backdrop-blur-md py-4 border-b border-white/[0.08] shadow-[0_12px_35px_rgba(0,0,0,0.8)]"
+            ? "bg-[#0a0a0a] py-4 border-b border-white/[0.08]"
             : "bg-transparent py-6 border-b border-white/[0.05]"
         }`}
       >
@@ -69,7 +69,7 @@ export function Navbar() {
                   >
                     <span>{item.label}</span>
                     {isActive && (
-                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#C8A45D] shadow-[0_0_8px_#C8A45D]" />
+                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#C8A45D]" />
                     )}
                   </a>
                 );
