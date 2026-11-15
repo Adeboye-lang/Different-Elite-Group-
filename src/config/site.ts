@@ -40,12 +40,12 @@ export const siteConfig = {
     closing: "“To support the player. Develop the person. Create the pathway. Shape the future.”",
   },
   location: {
-    country: "United Kingdom",
+    country: "London, UK",
     scope: "Worldwide Operations",
   },
   contact: {
-    email: "enquiries@differentelitegroup.com",
-    phone: "+44 (0) 20 7946 0880",
+    email: "courtney.holness@differentelitegroup.uk",
+    phone: "+44 7534 781267",
     instagramHandle: "@differentelitegroup",
     instagramUrl: "https://instagram.com/differentelitegroup",
   },

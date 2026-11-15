@@ -44,20 +44,19 @@ export function SectionHeading({
     >
       {label && (
         <div className="flex items-center gap-2.5">
-          <span className="w-2 h-2 rounded-full bg-[#C8A45D]" />
-          <span className="text-xs uppercase tracking-[0.24em] text-[#C8A45D] font-display font-semibold">
+          <span className="w-1.5 h-1.5 rounded-full bg-[#2D7A52]" />
+          <span className="text-[11px] uppercase tracking-[0.24em] text-[#868A92] font-display font-semibold">
             {label}
           </span>
-          <span className="w-10 h-[1px] bg-[#41454C]" />
         </div>
       )}
 
-      <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-extrabold tracking-tight text-[#F5F5F5] leading-[0.96] uppercase">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-extrabold tracking-tight text-[#F5F5F5] leading-[0.96] uppercase">
         {renderTitle()}
       </h2>
 
       {subtitle && (
-        <p className="text-sm md:text-base lg:text-lg text-[#B4B8BF] leading-relaxed max-w-2xl font-light">
+        <p className="text-sm md:text-base lg:text-lg text-[#B4B8BF] leading-relaxed max-w-2xl font-normal">
           {subtitle}
         </p>
       )}

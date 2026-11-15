@@ -10,7 +10,7 @@ import { SectionHeading } from "@/src/components/ui/SectionHeading";
 export function Mission() {
   const missionPillars = [
     {
-      icon: <Compass className="w-5 h-5 text-[#C8A45D]" />,
+      icon: <Compass className="w-5 h-5 text-[#2D7A52]" />,
       title: "Holistic Pathway Creation",
       desc: "Opening realistic, merit-based doors across domestic academies, senior teams, and international leagues.",
     },
@@ -20,7 +20,7 @@ export function Mission() {
       desc: "Guiding critical career decisions, contract discussions, and cultivating championship resilience under pressure.",
     },
     {
-      icon: <Shield className="w-5 h-5 text-[#C8A45D]" />,
+      icon: <Shield className="w-5 h-5 text-[#2D7A52]" />,
       title: "Foundations for Longevity",
       desc: "Ensuring long-term sustainability through education, brand value, personal wellbeing, and financial foresight.",
     },
@@ -29,24 +29,28 @@ export function Mission() {
   return (
     <section
       id="mission"
-      className="relative py-28 md:py-36 bg-[#14161A] border-t border-white/[0.08] overflow-hidden"
+      className="relative py-28 md:py-36 bg-[#14161A] border-t border-white/[0.06] overflow-hidden"
     >
-      {/* Player volleying against the sky, darkest behind the text column */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* Background image — shows clearly with rich contrast, seamlessly blended at all edges */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
         <Image
           src="/images/player-volley.jpg"
-          alt="Footballer striking a volley"
+          alt=""
           fill
           sizes="100vw"
-          className="object-cover object-[center_45%] grayscale -scale-x-100"
+          className="object-cover object-[right_35%] opacity-50 mix-blend-luminosity grayscale -scale-x-100 filter contrast-125 brightness-95"
         />
-        <div className="absolute inset-0 bg-[#14161A]/50 lg:bg-[#14161A]/20" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#14161A]/90 via-[#14161A]/45 to-transparent" />
+
+        {/* Seamless multi-stop feathered gradient masks dissolving edges into #14161A */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#14161A] via-[#14161A]/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#14161A] via-transparent to-[#14161A]/90" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#14161A] via-transparent to-[#14161A]" />
+        <div className="absolute inset-0 bg-[#2D7A52]/[0.05] mix-blend-color" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Column: Heading and Core Narrative */}
+          {/* Left Column */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -76,71 +80,66 @@ export function Mission() {
               </p>
             </div>
 
-            {/* Checklist of commitments */}
+            {/* Checklist */}
             <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs tracking-wide text-white font-medium">
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#C8A45D] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#2D7A52] shrink-0" />
                 <span>Player-centered representation</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#C8A45D] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#2D7A52] shrink-0" />
                 <span>Transparent career roadmap</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#C8A45D] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#2D7A52] shrink-0" />
                 <span>Mental & personal wellbeing</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#C8A45D] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#2D7A52] shrink-0" />
                 <span>Worldwide sporting network</span>
               </div>
             </div>
           </motion.div>
 
-          {/* Right Column: Mission Architecture Card Composition */}
+          {/* Right Column: Mission Pillars — open, modern list */}
           <motion.div
             initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="lg:col-span-5 space-y-4"
+            className="lg:col-span-5"
           >
-            <div className="p-8 border border-white/[0.14] bg-[#1F2227]/95 relative overflow-hidden">
-              <div className="absolute top-0 left-0 right-0 h-[2px] bg-[#C8A45D]" />
+            <div className="border-l-2 border-[#2D7A52] pl-6 mb-8">
+              <span className="text-xs uppercase font-display tracking-[0.24em] text-[#2D7A52] font-bold block mb-1">
+                DEG Agency Standards
+              </span>
+              <span className="text-xs font-display tracking-widest text-white/40 uppercase">
+                Excellence
+              </span>
+            </div>
 
-              <div className="flex items-center justify-between pb-6 mb-6 border-b border-white/[0.08]">
-                <span className="text-xs uppercase font-display tracking-[0.24em] text-[#C8A45D] font-bold">
-                  DEG AGENCY STANDARDS
-                </span>
-                <span className="text-xs font-display tracking-widest text-white/50 uppercase">
-                  EXCELLENCE
-                </span>
-              </div>
-
-              <div className="space-y-6">
-                {missionPillars.map((pillar, idx) => (
-                  <div key={idx} className="group flex gap-4 items-start">
-                    <div className="p-3 border border-white/10 bg-[#23262B] group-hover:border-[#C8A45D]/50 transition-colors shrink-0">
-                      {pillar.icon}
-                    </div>
-                    <div className="space-y-1">
-                      <h4 className="text-base font-display uppercase tracking-wide text-white font-bold group-hover:text-[#C8A45D] transition-colors">
-                        {pillar.title}
-                      </h4>
-                      <p className="text-xs text-[#B4B8BF] leading-relaxed font-light">
-                        {pillar.desc}
-                      </p>
-                    </div>
+            <div className="space-y-8">
+              {missionPillars.map((pillar, idx) => (
+                <div key={idx} className="group flex gap-5 items-start border-b border-white/[0.06] pb-8 last:border-0 last:pb-0">
+                  <div className="mt-0.5 shrink-0 transition-transform duration-300 group-hover:scale-110">
+                    {pillar.icon}
                   </div>
-                ))}
-              </div>
+                  <div className="space-y-1">
+                    <h4 className="text-sm font-display uppercase tracking-wide text-white font-bold group-hover:text-gradient transition-colors">
+                      {pillar.title}
+                    </h4>
+                    <p className="text-xs text-[#B4B8BF] leading-relaxed font-light">
+                      {pillar.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
 
-              {/* Bottom Quote Inset */}
-              <div className="mt-8 pt-6 border-t border-white/[0.08] text-center">
-                <p className="text-xs font-display uppercase tracking-[0.22em] text-[#C8A45D] font-bold">
-                  “Believe in Your Potential. Build Your Future. Become Elite.”
-                </p>
-              </div>
+            <div className="mt-8 pt-6 border-t border-white/[0.08]">
+              <p className="text-xs font-display uppercase tracking-[0.2em] text-[#C8A45D] font-bold">
+                “Believe in Your Potential. Build Your Future. Become Elite.”
+              </p>
             </div>
           </motion.div>
         </div>

@@ -1,129 +1,239 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Quote, Trophy } from "lucide-react";
+import { ArrowRight, Shield, Target, Users } from "lucide-react";
 import { siteConfig } from "@/src/config/site";
 import { SectionHeading } from "@/src/components/ui/SectionHeading";
-import { TacticsBoard } from "@/src/components/ui/TacticsBoard";
+import { Button } from "@/src/components/ui/Button";
+
+// The 5-stage career progression pathway
+const pathwayStages = [
+  {
+    step: "01",
+    title: "Academy & Grassroots",
+    tag: "Foundations",
+    desc: "Talent identification, technical benchmarking, and building elite daily training habits.",
+  },
+  {
+    step: "02",
+    title: "Youth & U21 Transition",
+    tag: "Development",
+    desc: "Tactical maturity, physical conditioning, and high-pressure competitive adaptation.",
+  },
+  {
+    step: "03",
+    title: "Senior Debut & First Team",
+    tag: "Breakthrough",
+    desc: "First-team exposure, merit-based trial management, and performance consistency.",
+  },
+  {
+    step: "04",
+    title: "Professional Contract",
+    tag: "Representation",
+    desc: "Rigorous contract stewardship, commercial branding, and holistic career protection.",
+  },
+  {
+    step: "05",
+    title: "International & Legacy",
+    tag: "Elite Stage",
+    desc: "Global league opportunities, international recognition, and post-football longevity.",
+  },
+];
 
 export function About() {
+  const [activeStage, setActiveStage] = useState(2);
+
   return (
     <section
       id="about"
-      className="relative py-28 md:py-36 bg-[#191B1F] border-t border-white/[0.08] overflow-hidden"
+      className="relative py-28 md:py-36 bg-[#191B1F] border-t border-white/[0.06] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mb-20">
+        <div className="mb-16 md:mb-20">
           <SectionHeading
             label="01 / IDENTITY & ETHOS"
             title="Every Player Has a Story. Every Journey Deserves a Pathway."
             accentText="Pathway."
-            subtitle="Different Elite Group is a premier football agency built on passion, ambition, trust and a genuine desire to unlock athletic potential on the global stage."
+            subtitle="Different Elite Group is a premier London-based football agency built on passion, ambition, trust and an uncompromising commitment to athletic and human potential."
           />
         </div>
 
-        {/* Editorial Layout: Asymmetric 2-column with photography and football agency pillars */}
+        {/* ─── 2-Column Editorial Spread ─── */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Visual Composition with Editorial Player Portrait */}
+          
+          {/* Left Column (5 cols): The DEG Pathway Progression Ladder */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -25 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
             className="lg:col-span-5 relative"
           >
-            <TacticsBoard />
-
-            {/* Quote Badge */}
-            <div className="relative max-w-md mx-auto -mt-10 px-4 sm:px-6">
-              <div className="p-5 bg-[#16181C]/95 border border-[#C8A45D]/40">
-                <Quote className="w-5 h-5 text-[#C8A45D] mb-2 opacity-90" />
-                <p className="text-sm font-light text-white leading-relaxed italic">
-                  {siteConfig.quotes.aboutFeature1}
-                </p>
-                <span className="block mt-2 text-xs uppercase tracking-[0.2em] text-[#C8A45D] font-display font-bold">
-                  — DEG COMMITMENT
+            {/* Header Banner */}
+            <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/[0.08]">
+              <div className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#2D7A52]" />
+                <span className="text-xs uppercase font-display tracking-[0.22em] text-white font-bold">
+                  THE DEG PATHWAY MODEL
                 </span>
               </div>
+              <span className="text-[10px] uppercase font-display tracking-widest text-[#C8A45D] font-bold">
+                5-STAGE ROADMAP
+              </span>
             </div>
 
-            {/* Corner Border Detail */}
-            <div className="hidden sm:block absolute -bottom-3 -right-3 w-28 h-28 border border-[#C8A45D]/30 -z-10 pointer-events-none" />
+            {/* Vertical Pathway Timeline */}
+            <div className="relative pl-6 space-y-4 before:absolute before:left-[11px] before:top-3 before:bottom-3 before:w-[2px] before:bg-white/10">
+              {pathwayStages.map((stage, idx) => {
+                const isActive = idx === activeStage;
+                return (
+                  <div
+                    key={stage.step}
+                    onClick={() => setActiveStage(idx)}
+                    className={`group relative cursor-pointer p-4 transition-all duration-200 border-l-2 ${
+                      isActive
+                        ? "bg-[#212429] border-l-[#C8A45D] shadow-md"
+                        : "bg-transparent border-l-transparent hover:bg-white/[0.02]"
+                    }`}
+                  >
+                    {/* Node Dot on the timeline */}
+                    <span
+                      className={`absolute -left-[31px] top-5 w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-display font-bold transition-all duration-200 ${
+                        isActive
+                          ? "bg-[#C8A45D] text-[#14161A] ring-4 ring-[#191B1F]"
+                          : "bg-[#14161A] text-[#868A92] border border-white/20 group-hover:border-white/50"
+                      }`}
+                    >
+                      {idx + 1}
+                    </span>
+
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] uppercase tracking-[0.2em] font-display font-semibold text-[#868A92]">
+                          STAGE {stage.step} · {stage.tag}
+                        </span>
+                        <span className={`text-[10px] font-display font-bold uppercase transition-colors ${
+                          isActive ? "text-[#C8A45D]" : "text-white/30 group-hover:text-white"
+                        }`}>
+                          {isActive ? "SELECTED" : "VIEW"}
+                        </span>
+                      </div>
+
+                      <h4 className="text-base font-display uppercase tracking-wide font-bold text-white">
+                        {stage.title}
+                      </h4>
+
+                      <p className="text-xs text-[#B4B8BF] font-light leading-relaxed pt-1">
+                        {stage.desc}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* Bottom Quote Accent */}
+            <div className="mt-8 p-5 border-l-2 border-[#2D7A52] bg-white/[0.015]">
+              <p className="text-xs sm:text-sm text-[#B4B8BF] font-light italic leading-relaxed">
+                {siteConfig.quotes.aboutFeature1}
+              </p>
+              <span className="block mt-2 text-[10px] uppercase tracking-[0.22em] text-[#C8A45D] font-display font-bold">
+                — DEG MANAGEMENT PRINCIPLE
+              </span>
+            </div>
           </motion.div>
 
-          {/* Right Column: Editorial Text Narrative & Structured Feature Cards */}
+          {/* Right Column (7 cols): Editorial Narrative & Core Practice Pillars */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 25 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.1 }}
-            className="lg:col-span-7 space-y-8"
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="lg:col-span-7 space-y-9"
           >
-            {/* Primary Paragraphs */}
-            <div className="space-y-6 text-[#B4B8BF] font-light text-base md:text-lg leading-relaxed">
-              <p className="text-white text-lg md:text-xl font-normal leading-relaxed border-l-2 border-[#C8A45D] pl-6 py-1">
-                We believe that every player has a unique journey, and with the right guidance, opportunities and support, they can unlock their true potential both on and off the pitch.
-              </p>
-
-              <p>
-                Our agency is driven by one clear purpose: to help talented footballers develop, progress and build successful, sustainable careers within the game.
-              </p>
-
-              <p>
-                At Different Elite Group, we understand that football is more than just a sport. For many players, it is a lifelong dream, a passion and an opportunity to create a better future for themselves and their families.
-              </p>
-
-              <p>
-                Our approach is personal, professional and player-focused. We aim to build strong, lasting relationships with our players, understand their individual ambitions and provide the guidance they need to make informed decisions throughout their careers.
+            {/* Lead Headline Statement */}
+            <div className="space-y-4">
+              <span className="text-xs uppercase font-display tracking-[0.24em] text-[#C8A45D] font-bold block">
+                THE PHILOSOPHY BEHIND DEG
+              </span>
+              <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold text-white uppercase tracking-tight leading-[1.05]">
+                We Believe in Recognising the <span className="text-[#C8A45D]">Individual</span> Behind the Talent.
+              </h3>
+              <p className="text-base sm:text-lg text-[#B4B8BF] font-normal leading-relaxed border-l-2 border-[#C8A45D] pl-6 py-1">
+                At Different Elite Group, we understand that football is more than just a sport. For many players, it is a lifelong ambition, an opportunity to rewrite their family's future, and a pursuit that demands total dedication.
               </p>
             </div>
 
-            {/* Featured Pull Quote Block */}
-            <div className="p-6 md:p-8 border border-white/[0.1] bg-[#1F2227] relative overflow-hidden">
-              <div className="flex items-start gap-4">
-                <div className="p-3 border border-[#C8A45D]/40 bg-[#C8A45D]/10 shrink-0">
-                  <Trophy className="w-5 h-5 text-[#C8A45D]" />
+            {/* 3 Core Practice Pillars */}
+            <div className="space-y-5 pt-2 border-t border-white/[0.08]">
+              {[
+                {
+                  icon: <Users className="w-5 h-5 text-[#2D7A52]" />,
+                  number: "01",
+                  title: "Human-First Athlete Stewardship",
+                  desc: "We refuse to treat footballers as commodities or statistics. Every player receives dedicated director-level attention, honest career counsel, mental balance guidance, and continuous personal check-ins.",
+                },
+                {
+                  icon: <Shield className="w-5 h-5 text-[#C8A45D]" />,
+                  number: "02",
+                  title: "Uncompromising Integrity & Governance",
+                  desc: "Operating from London under strict compliance with FIFA and Football Association regulatory frameworks. Transparent contract negotiation, zero false promises, and genuine athlete advocacy.",
+                },
+                {
+                  icon: <Target className="w-5 h-5 text-[#2D7A52]" />,
+                  number: "03",
+                  title: "Legitimate Domestic & Global Pathways",
+                  desc: "We cultivate direct relationships with club sporting directors, head scouts, and academy managers across Premier League, EFL, European, and international leagues to open genuine doors.",
+                },
+              ].map((pillar) => (
+                <div
+                  key={pillar.number}
+                  className="group flex items-start gap-5 py-4 border-b border-white/[0.06] last:border-0 hover:bg-white/[0.015] px-3 -mx-3 transition-colors"
+                >
+                  <div className="p-3 border border-white/10 bg-[#16181C] shrink-0 group-hover:border-[#C8A45D]/50 transition-colors">
+                    {pillar.icon}
+                  </div>
+                  <div className="space-y-1.5 flex-1">
+                    <div className="flex items-center gap-3">
+                      <span className="text-xs font-display font-bold text-[#C8A45D]">
+                        {pillar.number}
+                      </span>
+                      <h4 className="text-base font-display uppercase tracking-wide text-white font-bold group-hover:text-[#C8A45D] transition-colors">
+                        {pillar.title}
+                      </h4>
+                    </div>
+                    <p className="text-xs sm:text-sm text-[#B4B8BF] font-light leading-relaxed">
+                      {pillar.desc}
+                    </p>
+                  </div>
                 </div>
-                <div className="space-y-1">
-                  <span className="text-xs uppercase tracking-[0.24em] text-[#C8A45D] font-display font-bold block">
-                    THE DEG DIFFERENCE
-                  </span>
-                  <p className="text-base sm:text-lg text-[#F5F5F5] font-normal leading-snug">
-                    “Every player matters. Every journey is different. Every ambition deserves the right support.”
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
 
-            {/* Two Pillar Cards */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="p-6 border border-white/[0.08] bg-[#1F2227] space-y-2">
-                <span className="text-xs uppercase font-display tracking-widest text-[#C8A45D] font-bold">
-                  01 / BESPOKE GUIDANCE
+            {/* Bottom Action Strip */}
+            <div className="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 border-t border-white/[0.08]">
+              <div className="space-y-0.5">
+                <span className="text-xs uppercase font-display tracking-wider text-white font-bold block">
+                  READY TO ELEVATE YOUR TRAJECTORY?
                 </span>
-                <h4 className="text-base font-display uppercase tracking-wider text-white font-bold">
-                  Individual Attention
-                </h4>
-                <p className="text-xs text-[#B4B8BF] leading-relaxed font-light">
-                  Tailored development programs recognizing unique attributes, technical strengths, and personal aspirations.
-                </p>
+                <span className="text-xs text-[#868A92] font-light">
+                  Direct consultations conducted with absolute discretion.
+                </span>
               </div>
 
-              <div className="p-6 border border-white/[0.08] bg-[#1F2227] space-y-2">
-                <span className="text-xs uppercase font-display tracking-widest text-[#C8A45D] font-bold">
-                  02 / UNCOMPROMISING ETHICS
-                </span>
-                <h4 className="text-base font-display uppercase tracking-wider text-white font-bold">
-                  Elite Standards
-                </h4>
-                <p className="text-xs text-[#B4B8BF] leading-relaxed font-light">
-                  Uncompromising integrity, candid career stewardship, and transparent football governance.
-                </p>
-              </div>
+              <Button
+                variant="accent"
+                size="md"
+                href="#contact"
+                icon={<ArrowRight className="w-4 h-4" />}
+              >
+                Start Your Journey
+              </Button>
             </div>
           </motion.div>
+
         </div>
       </div>
     </section>

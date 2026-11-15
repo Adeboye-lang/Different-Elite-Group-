@@ -27,20 +27,21 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-medium tracking-[0.12em] sm:tracking-[0.16em] uppercase transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A45D] disabled:opacity-50 disabled:pointer-events-none select-none relative group overflow-hidden cursor-pointer";
+    "inline-flex items-center justify-center font-display font-bold tracking-[0.14em] uppercase transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#C8A45D] disabled:opacity-50 disabled:pointer-events-none select-none relative group cursor-pointer active:scale-[0.99]";
 
   const sizeStyles = {
-    sm: "text-[10px] py-2 px-4 gap-2",
-    md: "text-xs py-3 px-6 gap-2.5",
-    lg: "text-xs py-4 px-8 gap-3",
+    sm: "text-[11px] py-2.5 px-5 gap-2",
+    md: "text-xs py-3.5 px-7 gap-2.5",
+    lg: "text-xs py-4 px-9 gap-3",
   };
 
   const variantStyles = {
     primary:
-      "bg-[#22252A] text-[#F5F5F5] border border-[#41454C] hover:border-[#C8A45D] hover:bg-[#272A30]",
-    accent: "bg-[#C8A45D] text-[#14161A] font-semibold hover:bg-[#D9B978]",
+      "bg-[#212429] text-[#F5F5F5] border border-white/10 hover:border-white/30 hover:bg-[#272B31]",
+    accent:
+      "bg-[#C8A45D] text-[#14161A] font-bold hover:bg-[#DFC27D] hover:shadow-[0_4px_24px_rgba(200,164,93,0.3)]",
     outline:
-      "bg-transparent text-[#F5F5F5] border border-white/15 hover:border-white/40 hover:bg-white/[0.04]",
+      "bg-transparent text-[#F5F5F5] border border-white/20 hover:border-white/60 hover:bg-white/[0.04]",
     ghost:
       "bg-transparent text-[#B4B8BF] hover:text-[#F5F5F5] p-0 tracking-[0.18em] border-none shadow-none",
   };
@@ -48,13 +49,13 @@ export function Button({
   const content = (
     <>
       {icon && iconPosition === "left" && (
-        <span className="transition-transform duration-300 group-hover:-translate-x-0.5">
+        <span className="transition-transform duration-200 group-hover:-translate-x-0.5">
           {icon}
         </span>
       )}
-      <span className="relative z-10">{children}</span>
+      <span>{children}</span>
       {icon && iconPosition === "right" && (
-        <span className="transition-transform duration-300 group-hover:translate-x-0.5">
+        <span className="transition-transform duration-200 group-hover:translate-x-0.5">
           {icon}
         </span>
       )}

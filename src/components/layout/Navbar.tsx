@@ -21,7 +21,6 @@ export function Navbar() {
       const sections = siteConfig.navItems.map((item) =>
         item.href.replace("#", "")
       );
-
       for (const section of sections) {
         const el = document.getElementById(section);
         if (el) {
@@ -41,18 +40,18 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           isScrolled
-            ? "bg-[#16181C] py-4 border-b border-white/[0.08]"
-            : "bg-transparent py-6 border-b border-white/[0.05]"
+            ? "backdrop-blur-xl bg-[#14161A]/90 py-4 border-b border-white/[0.08]"
+            : "bg-transparent py-6 border-b border-white/[0.04]"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            {/* Left: Replaceable DEG Wordmark Logo */}
+            {/* Logo */}
             <Logo />
 
-            {/* Center: Desktop Navigation Links (FC/PL bold uppercase) */}
+            {/* Desktop Nav */}
             <nav className="hidden lg:flex items-center space-x-9">
               {siteConfig.navItems.map((item) => {
                 const isActive = activeSection === item.href.replace("#", "");
@@ -61,22 +60,24 @@ export function Navbar() {
                     key={item.href}
                     href={item.href}
                     onClick={(e) => scrollToSection(e, item.href)}
-                    className={`relative text-xs uppercase font-display tracking-[0.22em] transition-all duration-300 py-1 ${
+                    className={`relative text-xs uppercase font-display tracking-[0.22em] transition-all duration-200 py-1.5 ${
                       isActive
                         ? "text-white font-bold"
-                        : "text-[#B4B8BF] hover:text-white font-medium"
+                        : "text-[#868A92] hover:text-white font-medium"
                     }`}
                   >
                     <span>{item.label}</span>
+
+                    {/* Clean gold underline on active */}
                     {isActive && (
-                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#C8A45D]" />
+                      <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#C8A45D] rounded-full" />
                     )}
                   </a>
                 );
               })}
             </nav>
 
-            {/* Right: Quick Enquiry Button & Mobile Hamburger */}
+            {/* Right: CTA + Hamburger */}
             <div className="flex items-center gap-4">
               <div className="hidden sm:block">
                 <Button
@@ -89,10 +90,9 @@ export function Navbar() {
                 </Button>
               </div>
 
-              {/* Mobile Menu Hamburger Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(true)}
-                className="lg:hidden p-2.5 text-white hover:text-[#C8A45D] border border-white/10 hover:border-[#C8A45D]/40 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C8A45D]"
+                className="lg:hidden p-2.5 text-white hover:text-[#C8A45D] border border-white/10 hover:border-[#C8A45D]/50 transition-colors focus:outline-none focus:ring-2 focus:ring-[#C8A45D]/50"
                 aria-label="Open mobile navigation menu"
               >
                 <Menu className="w-5 h-5" />
@@ -102,7 +102,6 @@ export function Navbar() {
         </div>
       </header>
 
-      {/* Mobile Menu Drawer */}
       <MobileMenu
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}

@@ -2,34 +2,36 @@ import React from "react";
 
 const stages = [
   "Grassroots",
-  "Academy",
+  "Academy Pathway",
   "Under-18s",
-  "Under-21s",
-  "First Team",
+  "Under-21s Development",
+  "First Team Debut",
   "Professional Contract",
-  "International Football",
-  "Life After Football",
+  "International Recognition",
+  "Career Longevity & Heritage",
 ];
 
-// Matchday-style scrolling strip showing every stage DEG supports
 export function PathwayTicker() {
   const items = [...stages, ...stages];
 
   return (
-    <div className="relative bg-[#C8A45D] text-[#14161A] overflow-hidden border-y border-[#8F7236]">
-      <div className="flex w-max animate-ticker py-3.5" aria-hidden="true">
+    <div className="relative overflow-hidden bg-[#121417] border-y border-white/[0.08] py-4">
+      {/* Edge fade masks */}
+      <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#121417] to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#121417] to-transparent z-10 pointer-events-none" />
+
+      <div className="relative flex w-max animate-ticker" aria-hidden="true">
         {items.map((stage, idx) => (
           <span
             key={idx}
-            className="flex items-center gap-6 px-6 text-sm sm:text-base font-display font-extrabold uppercase tracking-[0.18em] whitespace-nowrap"
+            className="flex items-center gap-6 px-8 text-xs sm:text-sm font-display font-bold uppercase tracking-[0.24em] whitespace-nowrap text-white/90"
           >
-            {stage}
-            <svg viewBox="0 0 12 12" className="w-2.5 h-2.5" fill="currentColor">
-              <circle cx="6" cy="6" r="6" />
-            </svg>
+            <span>{stage}</span>
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C8A45D] shrink-0" />
           </span>
         ))}
       </div>
+
       <p className="sr-only">
         We support players at every stage: {stages.join(", ")}.
       </p>

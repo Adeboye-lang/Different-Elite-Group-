@@ -21,6 +21,7 @@ export default function HomePage() {
     description: siteConfig.tagline,
     address: {
       "@type": "PostalAddress",
+      addressLocality: "London",
       addressCountry: "GB",
     },
     contactPoint: {

@@ -29,10 +29,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: `${siteConfig.name} (${siteConfig.shortName}) | International Football Agency`,
   description:
-    "Different Elite Group (DEG) is a premier UK-based football agency operating worldwide. Providing elite player representation, holistic career development, and bespoke club pathways.",
+    "Different Elite Group (DEG) is a premier London, UK-based football agency operating worldwide. Providing elite player representation, holistic career development, and bespoke club pathways.",
   keywords: [
     "Different Elite Group",
     "DEG",
+    "Football Agency London",
     "Football Agency",
     "Sports Management",
     "UK Football Agency",
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${siteConfig.name} | More Than an Agency. A Pathway to Your Future.`,
     description:
-      "Premier UK-based football management agency operating worldwide. Player representation, development, club pathways and holistic career stewardship.",
+      "Premier London, UK-based football management agency operating worldwide. Player representation, development, club pathways and holistic career stewardship.",
     url: "https://differentelitegroup.com",
     siteName: siteConfig.name,
     locale: "en_GB",

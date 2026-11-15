@@ -6,13 +6,46 @@ import { Mail, Phone, Globe, ArrowUpRight, ShieldCheck } from "lucide-react";
 import { InstagramIcon } from "@/src/components/ui/InstagramIcon";
 import { siteConfig } from "@/src/config/site";
 import { SectionHeading } from "@/src/components/ui/SectionHeading";
-import { Button } from "@/src/components/ui/Button";
 
 export function Contact() {
+  const contacts = [
+    {
+      icon: <Mail className="w-5 h-5" />,
+      label: "Email",
+      sub: "Confidential Enquiries",
+      value: siteConfig.contact.email,
+      href: `mailto:${siteConfig.contact.email}?subject=Confidential%20Career%20Enquiry%20-%20DEG`,
+      cta: "Send Email",
+      accentColor: "text-[#C8A45D]",
+      hoverBorderColor: "hover:border-l-[#C8A45D]",
+    },
+    {
+      icon: <InstagramIcon className="w-5 h-5" />,
+      label: "Instagram",
+      sub: "Official Channel",
+      value: siteConfig.contact.instagramHandle,
+      href: siteConfig.contact.instagramUrl,
+      cta: "Follow Us",
+      accentColor: "text-[#2D7A52]",
+      hoverBorderColor: "hover:border-l-[#2D7A52]",
+      isExternal: true,
+    },
+    {
+      icon: <Phone className="w-5 h-5" />,
+      label: "Phone",
+      sub: "Direct Representation Line",
+      value: siteConfig.contact.phone,
+      href: `tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, "")}`,
+      cta: "Call Us",
+      accentColor: "text-[#C8A45D]",
+      hoverBorderColor: "hover:border-l-[#C8A45D]",
+    },
+  ];
+
   return (
     <section
       id="contact"
-      className="relative py-28 md:py-36 bg-[#16181C] border-t border-white/[0.08] overflow-hidden"
+      className="relative py-24 md:py-32 bg-[#16181C] border-t border-white/[0.06] overflow-hidden"
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -22,162 +55,55 @@ export function Contact() {
             label="05 / DIRECT INTAKE"
             title="Your Journey Starts Here."
             accentText="Starts Here."
-            subtitle="Every great journey begins with a conversation. Tell us about your ambitions and let’s explore what the future could look like."
+            subtitle="Every great journey begins with a conversation. Tell us about your ambitions and let's explore what the future could look like."
           />
         </div>
 
-        {/* Executive Direct Contact Hub (No Form — Pure Elite Agency Discretion) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
-          {/* Card 1: Direct Confidential Email */}
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="group p-6 sm:p-8 border border-white/[0.1] bg-[#1F2227] hover:border-[#C8A45D]/50 transition-all duration-500 flex flex-col justify-between"
-          >
-            <div className="space-y-4">
-              <div className="flex items-center justify-between pb-4 border-b border-white/[0.08]">
-                <div className="p-3 border border-white/10 bg-[#25282D] group-hover:border-[#C8A45D]/40 transition-colors">
-                  <Mail className="w-5 h-5 text-[#C8A45D]" />
+        {/* Contact rows — open editorial layout, no boxes */}
+        <div className="max-w-3xl mx-auto">
+          {contacts.map((item, i) => (
+            <motion.a
+              key={item.label}
+              href={item.href}
+              target={item.isExternal ? "_blank" : undefined}
+              rel={item.isExternal ? "noopener noreferrer" : undefined}
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className={`group flex items-center justify-between py-6 border-b border-white/[0.07] border-l-2 border-l-transparent pl-5 transition-all duration-200 hover:bg-white/[0.015] ${item.hoverBorderColor}`}
+            >
+              <div className="flex items-center gap-5">
+                <span className={`${item.accentColor} transition-transform duration-200 group-hover:scale-105`}>
+                  {item.icon}
+                </span>
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-[#868A92] font-display font-semibold block">
+                    {item.sub}
+                  </span>
+                  <span className="text-lg font-display font-bold uppercase tracking-wide text-white transition-colors">
+                    {item.label}
+                  </span>
+                  <span className="text-xs text-[#B4B8BF] font-light block mt-0.5">
+                    {item.value}
+                  </span>
                 </div>
-                <span className="text-[10px] font-display uppercase tracking-widest text-[#C8A45D] font-bold">
-                  DIRECT DESK
-                </span>
               </div>
 
-              <div>
-                <span className="text-xs font-display uppercase tracking-wider text-[#B4B8BF] font-semibold block">
-                  Confidential Enquiries
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-xs uppercase tracking-widest font-display font-semibold text-[#868A92] group-hover:text-white transition-colors hidden sm:block">
+                  {item.cta}
                 </span>
-                <h3 className="text-xl font-display uppercase tracking-tight text-white font-bold mt-1">
-                  Agency Email
-                </h3>
+                <ArrowUpRight className="w-4 h-4 text-white/30 group-hover:text-[#C8A45D] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
               </div>
-
-              <p className="text-xs text-[#B4B8BF] font-light leading-relaxed">
-                Direct communication with agency directorship regarding player representation, trials, and career guidance.
-              </p>
-            </div>
-
-            <div className="pt-8">
-              <Button
-                variant="accent"
-                size="md"
-                href={`mailto:${siteConfig.contact.email}?subject=Confidential%20Career%20Enquiry%20-%20DEG`}
-                className="w-full"
-                icon={<ArrowUpRight className="w-4 h-4" />}
-              >
-                Send Direct Email
-              </Button>
-              <span className="text-[11px] text-white/50 block text-center mt-2.5 font-light">
-                {siteConfig.contact.email}
-              </span>
-            </div>
-          </motion.div>
-
-          {/* Card 2: Official Instagram (Sole Social Channel) */}
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="group p-6 sm:p-8 border border-white/[0.1] bg-[#1F2227] hover:border-[#C8A45D]/50 transition-all duration-500 flex flex-col justify-between"
-          >
-            <div className="space-y-4">
-              <div className="flex items-center justify-between pb-4 border-b border-white/[0.08]">
-                <div className="p-3 border border-white/10 bg-[#25282D] group-hover:border-[#C8A45D]/40 transition-colors">
-                  <InstagramIcon className="w-5 h-5 text-[#C8A45D]" />
-                </div>
-                <span className="text-[10px] font-display uppercase tracking-widest text-[#C8A45D] font-bold">
-                  OFFICIAL SOCIAL
-                </span>
-              </div>
-
-              <div>
-                <span className="text-xs font-display uppercase tracking-wider text-[#B4B8BF] font-semibold block">
-                  Follow Our Journey
-                </span>
-                <h3 className="text-xl font-display uppercase tracking-tight text-white font-bold mt-1">
-                  Instagram
-                </h3>
-              </div>
-
-              <p className="text-xs text-[#B4B8BF] font-light leading-relaxed">
-                Explore matchday insights, player development updates, and direct messaging on our official Instagram page.
-              </p>
-            </div>
-
-            <div className="pt-8">
-              <Button
-                variant="outline"
-                size="md"
-                href={siteConfig.contact.instagramUrl}
-                isExternal
-                className="w-full group-hover:border-[#C8A45D]"
-                icon={<ArrowUpRight className="w-4 h-4" />}
-              >
-                Connect on Instagram
-              </Button>
-              <span className="text-[11px] text-white/50 block text-center mt-2.5 font-light">
-                {siteConfig.contact.instagramHandle}
-              </span>
-            </div>
-          </motion.div>
-
-          {/* Card 3: Direct Representation Line */}
-          <motion.div
-            initial={{ opacity: 0, y: 25 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="group p-6 sm:p-8 border border-white/[0.1] bg-[#1F2227] hover:border-[#C8A45D]/50 transition-all duration-500 flex flex-col justify-between md:col-span-2 lg:col-span-1"
-          >
-            <div className="space-y-4">
-              <div className="flex items-center justify-between pb-4 border-b border-white/[0.08]">
-                <div className="p-3 border border-white/10 bg-[#25282D] group-hover:border-[#C8A45D]/40 transition-colors">
-                  <Phone className="w-5 h-5 text-[#C8A45D]" />
-                </div>
-                <span className="text-[10px] font-display uppercase tracking-widest text-[#C8A45D] font-bold">
-                  TELEPHONE
-                </span>
-              </div>
-
-              <div>
-                <span className="text-xs font-display uppercase tracking-wider text-[#B4B8BF] font-semibold block">
-                  Direct Line
-                </span>
-                <h3 className="text-xl font-display uppercase tracking-tight text-white font-bold mt-1">
-                  Representation Desk
-                </h3>
-              </div>
-
-              <p className="text-xs text-[#B4B8BF] font-light leading-relaxed">
-                Direct phone consultations for active professional players, club scouts, and authorized sporting directors.
-              </p>
-            </div>
-
-            <div className="pt-8">
-              <Button
-                variant="outline"
-                size="md"
-                href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, "")}`}
-                className="w-full group-hover:border-[#C8A45D]"
-                icon={<ArrowUpRight className="w-4 h-4" />}
-              >
-                Call Representation Desk
-              </Button>
-              <span className="text-[11px] text-white/50 block text-center mt-2.5 font-light">
-                {siteConfig.contact.phone}
-              </span>
-            </div>
-          </motion.div>
+            </motion.a>
+          ))}
         </div>
 
-        {/* Global Operations & Discretion Protocol Banner */}
-        <div className="mt-12 p-6 border border-white/[0.08] bg-[#181A1E] max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        {/* Footer banner */}
+        <div className="mt-14 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left border-t border-white/[0.06] pt-8 max-w-3xl mx-auto">
           <div className="flex items-center gap-3">
-            <Globe className="w-5 h-5 text-[#C8A45D] shrink-0" />
+            <Globe className="w-4 h-4 text-[#2D7A52] shrink-0" />
             <div>
               <span className="text-xs font-display uppercase tracking-wider text-white font-bold block">
                 {siteConfig.location.country} • {siteConfig.location.scope}
@@ -188,7 +114,7 @@ export function Contact() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 text-xs text-[#C8A45D] font-medium shrink-0">
+          <div className="flex items-center gap-2 text-xs text-[#2D7A52] font-medium shrink-0">
             <ShieldCheck className="w-4 h-4" />
             <span>Strict Client Confidentiality</span>
           </div>

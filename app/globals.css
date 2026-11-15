@@ -14,6 +14,8 @@
     --border-subtle: #2E3137;
     --border-frame: #363940;
     --border-frame-light: rgba(255, 255, 255, 0.1);
+    --green: #2D7A52;
+    --green-light: #3B9668;
   }
 
   * {
@@ -42,18 +44,14 @@
   }
 
   ::selection {
-    background-color: rgba(200, 164, 93, 0.3);
+    background-color: rgba(200, 164, 93, 0.25);
     color: #FFFFFF;
   }
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: #14161A;
-}
+/* ─── Custom Scrollbar ─────────────────────────────── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #14161A; }
 ::-webkit-scrollbar-thumb {
   background: #2E3137;
   border-radius: 2px;
@@ -62,38 +60,33 @@
   background: #C8A45D;
 }
 
-/* Mown Grass Stripes */
+/* ─── Pitch Stripes Texture ────────────────────────── */
 .pitch-stripes {
   background-image: repeating-linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.018) 0px,
-    rgba(255, 255, 255, 0.018) 80px,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 80px,
     transparent 80px,
     transparent 160px
   );
 }
 
-/* Kit Number Outline Type */
+/* ─── Kit Number Outline ───────────────────────────── */
 .kit-number {
   font-family: var(--font-display), sans-serif;
   font-weight: 900;
   line-height: 0.8;
   color: transparent;
-  -webkit-text-stroke: 1.5px rgba(200, 164, 93, 0.55);
+  -webkit-text-stroke: 1.5px rgba(200, 164, 93, 0.4);
 }
 
-/* Matchday Ticker */
+/* ─── Matchday Ticker Animation ────────────────────── */
 @keyframes ticker {
   from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  to   { transform: translateX(-50%); }
 }
-
-.animate-ticker {
-  animation: ticker 40s linear infinite;
-}
+.animate-ticker { animation: ticker 36s linear infinite; }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-ticker {
-    animation: none;
-  }
+  .animate-ticker { animation: none; }
 }
