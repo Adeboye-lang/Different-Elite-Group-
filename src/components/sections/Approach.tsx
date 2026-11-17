@@ -9,11 +9,11 @@ import { SectionHeading } from "@/src/components/ui/SectionHeading";
 
 export function Approach() {
   const valueIcons: Record<string, React.ReactNode> = {
-    TRUST: <Shield className="w-5 h-5 text-[#2D7A52]" />,
-    COMMITMENT: <HeartHandshake className="w-5 h-5 text-[#C8A45D]" />,
-    INTEGRITY: <Scale className="w-5 h-5 text-[#2D7A52]" />,
-    DEVELOPMENT: <TrendingUp className="w-5 h-5 text-[#C8A45D]" />,
-    OPPORTUNITY: <KeyRound className="w-5 h-5 text-[#2D7A52]" />,
+    TRUST: <Shield className="w-5 h-5 text-[#45AAA1]" />,
+    COMMITMENT: <HeartHandshake className="w-5 h-5 text-[#45AAA1]" />,
+    INTEGRITY: <Scale className="w-5 h-5 text-[#45AAA1]" />,
+    DEVELOPMENT: <TrendingUp className="w-5 h-5 text-[#45AAA1]" />,
+    OPPORTUNITY: <KeyRound className="w-5 h-5 text-[#45AAA1]" />,
   };
 
   return (
@@ -92,8 +92,8 @@ export function Approach() {
               </div>
 
               {/* Editorial text overlay with elegant left-border accent */}
-              <div className="relative z-10 space-y-4 border-l-2 border-[#2D7A52] pl-6 py-2">
-                <span className="text-xs uppercase font-display tracking-[0.24em] text-[#2D7A52] font-bold block">
+              <div className="relative z-10 space-y-4 border-l-2 border-[#45AAA1] pl-6 py-2">
+                <span className="text-xs uppercase font-display tracking-[0.24em] text-[#C8A45D] font-bold block">
                   The DEG Standard
                 </span>
                 <h3 className="text-3xl sm:text-4xl font-display font-extrabold text-white uppercase tracking-tight leading-tight">

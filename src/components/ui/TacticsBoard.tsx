@@ -46,7 +46,7 @@ export function TacticsBoard() {
       >
         <defs>
           <linearGradient id="pathGradient" x1="0%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" stopColor="#2D7A52" />
+            <stop offset="0%" stopColor="#45AAA1" />
             <stop offset="50%" stopColor="#C8A45D" />
             <stop offset="100%" stopColor="#DFC27D" />
           </linearGradient>
@@ -82,7 +82,7 @@ export function TacticsBoard() {
             <span
               className={`flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-full font-display font-extrabold text-xs sm:text-sm shadow-md transition-transform duration-300 hover:scale-110 ${
                 isFinal
-                  ? "bg-gradient-to-r from-[#C8A45D] to-[#2D7A52] text-white ring-2 ring-white/20"
+                  ? "bg-[#C8A45D] text-white ring-2 ring-white/20"
                   : "bg-[#14161A]/90 text-[#F5F5F5] border border-white/20"
               }`}
             >

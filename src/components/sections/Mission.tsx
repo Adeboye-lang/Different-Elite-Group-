@@ -10,17 +10,17 @@ import { SectionHeading } from "@/src/components/ui/SectionHeading";
 export function Mission() {
   const missionPillars = [
     {
-      icon: <Compass className="w-5 h-5 text-[#2D7A52]" />,
+      icon: <Compass className="w-5 h-5 text-[#45AAA1]" />,
       title: "Holistic Pathway Creation",
       desc: "Opening realistic, merit-based doors across domestic academies, senior teams, and international leagues.",
     },
     {
-      icon: <Target className="w-5 h-5 text-[#C8A45D]" />,
+      icon: <Target className="w-5 h-5 text-[#45AAA1]" />,
       title: "Mindset & Career Governance",
       desc: "Guiding critical career decisions, contract discussions, and cultivating championship resilience under pressure.",
     },
     {
-      icon: <Shield className="w-5 h-5 text-[#2D7A52]" />,
+      icon: <Shield className="w-5 h-5 text-[#45AAA1]" />,
       title: "Foundations for Longevity",
       desc: "Ensuring long-term sustainability through education, brand value, personal wellbeing, and financial foresight.",
     },
@@ -45,7 +45,7 @@ export function Mission() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#14161A] via-[#14161A]/80 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#14161A] via-transparent to-[#14161A]/90" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#14161A] via-transparent to-[#14161A]" />
-        <div className="absolute inset-0 bg-[#2D7A52]/[0.05] mix-blend-color" />
+        <div className="absolute inset-0 bg-[#45AAA1]/[0.05] mix-blend-color" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -71,7 +71,7 @@ export function Mission() {
                 We aim to support players at every stage of their football journey, from promising young talents taking their first steps towards professional football to established players looking to progress to the next level.
               </p>
 
-              <p className="text-white text-base md:text-lg font-normal border-l-2 border-[#C8A45D] pl-5">
+              <p className="text-white text-base md:text-lg font-normal border-l-2 border-[#45AAA1] pl-5">
                 Our focus is not simply on helping players secure opportunities. It is about helping them make the right decisions, develop the right mindset and build the foundations for long-term success.
               </p>
 
@@ -83,19 +83,19 @@ export function Mission() {
             {/* Checklist */}
             <div className="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-xs tracking-wide text-white font-medium">
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#2D7A52] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#45AAA1] shrink-0" />
                 <span>Player-centered representation</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#2D7A52] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#45AAA1] shrink-0" />
                 <span>Transparent career roadmap</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#2D7A52] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#45AAA1] shrink-0" />
                 <span>Mental & personal wellbeing</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-[#2D7A52] shrink-0" />
+                <CheckCircle2 className="w-4 h-4 text-[#45AAA1] shrink-0" />
                 <span>Worldwide sporting network</span>
               </div>
             </div>
@@ -109,8 +109,8 @@ export function Mission() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5"
           >
-            <div className="border-l-2 border-[#2D7A52] pl-6 mb-8">
-              <span className="text-xs uppercase font-display tracking-[0.24em] text-[#2D7A52] font-bold block mb-1">
+            <div className="border-l-2 border-[#45AAA1] pl-6 mb-8">
+              <span className="text-xs uppercase font-display tracking-[0.24em] text-[#C8A45D] font-bold block mb-1">
                 DEG Agency Standards
               </span>
               <span className="text-xs font-display tracking-widest text-white/40 uppercase">

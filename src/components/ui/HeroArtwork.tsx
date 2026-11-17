@@ -4,6 +4,16 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+// Fades the photo out on every side so it dissolves into the hero instead of sitting in a frame
+const edgeFade: React.CSSProperties = {
+  maskImage:
+    "linear-gradient(to bottom, transparent 0%, black 12%, black 62%, transparent 100%), linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%)",
+  WebkitMaskImage:
+    "linear-gradient(to bottom, transparent 0%, black 12%, black 62%, transparent 100%), linear-gradient(to right, transparent 0%, black 18%, black 82%, transparent 100%)",
+  maskComposite: "intersect",
+  WebkitMaskComposite: "source-in",
+};
+
 export function HeroArtwork() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
 
@@ -22,68 +32,37 @@ export function HeroArtwork() {
     <div
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative w-full max-w-lg mx-auto flex items-center justify-center select-none group"
+      className="relative w-full max-w-xl mx-auto select-none"
     >
-      {/* Ambient stadium rim glow behind the silhouette */}
-      <div className="absolute top-1/4 -inset-4 bg-gradient-to-tr from-[#2D7A52]/20 via-transparent to-[#C8A45D]/25 rounded-full blur-3xl pointer-events-none" />
-
-      {/* ─── Non-Square Editorial Stadium Arch Silhouette ─── */}
+      {/* Frameless player image, dissolved into the page */}
       <motion.div
         animate={{
-          x: mousePos.x * 10,
-          y: mousePos.y * 10,
+          x: mousePos.x * 8,
+          y: mousePos.y * 8,
         }}
         transition={{ type: "spring", stiffness: 100, damping: 25 }}
-        className="relative w-full aspect-[3/4] sm:aspect-[4/5] rounded-t-[180px] sm:rounded-t-[220px] rounded-b-[32px] overflow-hidden border-t-2 border-x border-white/15 bg-[#16181C]"
+        className="relative w-full aspect-[4/5]"
+        style={edgeFade}
       >
-        {/* Athlete Campaign Imagery */}
-        <div className="relative w-full h-full">
-          <Image
-            src="/images/hero-elite-player.jpg"
-            alt="Different Elite Group - Premier League Footballer"
-            fill
-            priority
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
-            className="object-cover object-[center_15%] filter contrast-110 brightness-100 group-hover:scale-105 transition-transform duration-700 ease-out"
-          />
-
-          {/* Seamless bottom and lateral vignettes to dissolve edges into the hero canvas */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#16181C] via-[#16181C]/30 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#16181C]/40 via-transparent to-[#16181C]" />
-          <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#16181C]/60 to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#16181C]/60 to-transparent" />
-        </div>
-
-        {/* Floating Typography & Status Overlay */}
-        <div className="absolute inset-0 flex flex-col justify-between p-6 sm:p-8 pointer-events-none">
-          {/* Top: Agency Tag Badge */}
-          <div className="flex items-center justify-center pt-3">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#14161A]/85 backdrop-blur-md border border-white/15 shadow-xl">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#2D7A52]" />
-              <span className="text-[10px] uppercase font-display tracking-[0.24em] text-white font-bold">
-                DEG ROSTER · LONDON, UK
-              </span>
-            </div>
-          </div>
-
-          {/* Bottom Narrative Anchor */}
-          <div className="space-y-1 pb-2">
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] uppercase tracking-[0.24em] font-display font-bold text-[#C8A45D]">
-                PREMIER LEAGUE & EUROPEAN PATHWAYS
-              </span>
-            </div>
-            <p className="text-base sm:text-lg font-display uppercase tracking-wide text-white font-black leading-tight drop-shadow-md">
-              PLAYER REPRESENTATION & CAREER STEWARDSHIP
-            </p>
-          </div>
-        </div>
+        <Image
+          src="/images/hero-elite-player.jpg"
+          alt="Professional footballer in a floodlit stadium"
+          fill
+          priority
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 40vw"
+          className="object-cover object-[center_20%]"
+        />
       </motion.div>
 
-      {/* Decorative Layered Kit Number (Sitting behind the arch) */}
-      <span className="kit-number absolute -top-8 -right-4 sm:-right-8 text-9xl sm:text-[10rem] opacity-35 -z-10 pointer-events-none select-none">
-        10
-      </span>
+      {/* Caption sitting under the player */}
+      <div className="relative -mt-16 sm:-mt-20 border-l-2 border-[#45AAA1] pl-4 max-w-sm">
+        <span className="block text-[10px] uppercase tracking-[0.24em] font-display font-bold text-[#C8A45D]">
+          Premier League & European Pathways
+        </span>
+        <p className="mt-1 text-base sm:text-lg font-display uppercase tracking-wide text-white font-black leading-tight">
+          Player Representation & Career Stewardship
+        </p>
+      </div>
     </div>
   );
 }

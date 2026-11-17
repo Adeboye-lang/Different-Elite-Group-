@@ -19,7 +19,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#14161A] border-t border-white/[0.08] text-[#B4B8BF] pt-20 pb-12 overflow-hidden">
+    <footer className="relative bg-[#052C30] border-t border-white/[0.08] text-[#B4B8BF] pt-20 pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 pb-16 border-b border-white/[0.06]">
           {/* Col 1 & 2: Brand Identity & Vision */}
@@ -65,7 +65,7 @@ export function Footer() {
             </span>
             <ul className="space-y-3 text-xs font-light">
               <li className="flex items-center gap-2.5">
-                <Globe className="w-3.5 h-3.5 text-[#2D7A52] shrink-0" />
+                <Globe className="w-3.5 h-3.5 text-[#C8A45D] shrink-0" />
                 <span className="font-display uppercase tracking-wider text-white">
                   {siteConfig.location.country} • {siteConfig.location.scope}
                 </span>
@@ -80,7 +80,7 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex items-center gap-2.5">
-                <Phone className="w-3.5 h-3.5 text-[#2D7A52] shrink-0" />
+                <Phone className="w-3.5 h-3.5 text-[#C8A45D] shrink-0" />
                 <a
                   href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, "")}`}
                   className="hover:text-white transition-colors"

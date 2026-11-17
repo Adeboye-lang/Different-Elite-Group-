@@ -15,10 +15,10 @@ export function PathwayTicker() {
   const items = [...stages, ...stages];
 
   return (
-    <div className="relative overflow-hidden bg-[#121417] border-y border-white/[0.08] py-4">
+    <div className="relative overflow-hidden bg-[#07373B] border-y border-white/[0.08] py-4">
       {/* Edge fade masks */}
-      <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#121417] to-transparent z-10 pointer-events-none" />
-      <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#121417] to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#07373B] to-transparent z-10 pointer-events-none" />
+      <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#07373B] to-transparent z-10 pointer-events-none" />
 
       <div className="relative flex w-max animate-ticker" aria-hidden="true">
         {items.map((stage, idx) => (

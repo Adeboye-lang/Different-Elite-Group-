@@ -59,7 +59,7 @@ export function ContactForm() {
       {/* Success Notification Banner */}
       {submissionState.status === "success" && (
         <div className="mb-6 p-4 border border-[#C8A45D]/40 bg-[#C8A45D]/10 flex items-start gap-3">
-          <CheckCircle2 className="w-5 h-5 text-[#C8A45D] shrink-0 mt-0.5" />
+          <CheckCircle2 className="w-5 h-5 text-[#45AAA1] shrink-0 mt-0.5" />
           <div className="text-xs text-white leading-relaxed">
             <p className="font-semibold text-[#C8A45D] uppercase tracking-wider mb-0.5">
               Enquiry Received

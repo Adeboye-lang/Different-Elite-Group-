@@ -65,12 +65,12 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   className="group flex items-baseline justify-between py-2 text-2xl sm:text-3xl font-display font-bold uppercase tracking-wide text-[#F5F5F5] hover:text-[#C8A45D] transition-colors border-b border-white/[0.04]"
                 >
                   <span className="flex items-center gap-4">
-                    <span className="text-xs text-[#2D7A52] tracking-widest font-mono">
+                    <span className="text-xs text-[#C8A45D] tracking-widest font-mono">
                       0{index + 1}
                     </span>
                     <span>{item.label}</span>
                   </span>
-                  <ArrowUpRight className="w-5 h-5 text-white/30 group-hover:text-[#C8A45D] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                  <ArrowUpRight className="w-5 h-5 text-white/30 group-hover:text-[#45AAA1] transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </a>
               </motion.div>
             ))}
@@ -80,25 +80,25 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           <div className="border-t border-white/10 pt-6 space-y-4">
             <div className="flex flex-col gap-2.5 text-xs text-[#B4B8BF] font-light">
               <div className="flex items-center gap-2.5">
-                <Globe className="w-4 h-4 text-[#2D7A52]" />
+                <Globe className="w-4 h-4 text-[#45AAA1]" />
                 <span className="font-display uppercase tracking-wider text-white">
                   {siteConfig.location.country} • {siteConfig.location.scope}
                 </span>
               </div>
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#C8A45D]" />
+                <Mail className="w-4 h-4 text-[#45AAA1]" />
                 <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-white transition-colors">
                   {siteConfig.contact.email}
                 </a>
               </div>
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#2D7A52]" />
+                <Phone className="w-4 h-4 text-[#45AAA1]" />
                 <a href={`tel:${siteConfig.contact.phone.replace(/[^0-9+]/g, "")}`} className="hover:text-white transition-colors">
                   {siteConfig.contact.phone}
                 </a>
               </div>
               <div className="flex items-center gap-2.5 pt-1">
-                <InstagramIcon className="w-4 h-4 text-[#C8A45D]" />
+                <InstagramIcon className="w-4 h-4 text-[#45AAA1]" />
                 <a
                   href={siteConfig.contact.instagramUrl}
                   target="_blank"

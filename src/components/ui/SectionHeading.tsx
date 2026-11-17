@@ -44,7 +44,7 @@ export function SectionHeading({
     >
       {label && (
         <div className="flex items-center gap-2.5">
-          <span className="w-1.5 h-1.5 rounded-full bg-[#2D7A52]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#45AAA1]" />
           <span className="text-[11px] uppercase tracking-[0.24em] text-[#868A92] font-display font-semibold">
             {label}
           </span>

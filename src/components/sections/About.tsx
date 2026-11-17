@@ -74,7 +74,7 @@ export function About() {
             {/* Header Banner */}
             <div className="flex items-center justify-between pb-4 mb-6 border-b border-white/[0.08]">
               <div className="flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#2D7A52]" />
+                <span className="w-1.5 h-1.5 rounded-full bg-[#45AAA1]" />
                 <span className="text-xs uppercase font-display tracking-[0.22em] text-white font-bold">
                   THE DEG PATHWAY MODEL
                 </span>
@@ -135,7 +135,7 @@ export function About() {
             </div>
 
             {/* Bottom Quote Accent */}
-            <div className="mt-8 p-5 border-l-2 border-[#2D7A52] bg-white/[0.015]">
+            <div className="mt-8 p-5 border-l-2 border-[#45AAA1] bg-white/[0.015]">
               <p className="text-xs sm:text-sm text-[#B4B8BF] font-light italic leading-relaxed">
                 {siteConfig.quotes.aboutFeature1}
               </p>
@@ -161,7 +161,7 @@ export function About() {
               <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-extrabold text-white uppercase tracking-tight leading-[1.05]">
                 We Believe in Recognising the <span className="text-[#C8A45D]">Individual</span> Behind the Talent.
               </h3>
-              <p className="text-base sm:text-lg text-[#B4B8BF] font-normal leading-relaxed border-l-2 border-[#C8A45D] pl-6 py-1">
+              <p className="text-base sm:text-lg text-[#B4B8BF] font-normal leading-relaxed border-l-2 border-[#45AAA1] pl-6 py-1">
                 At Different Elite Group, we understand that football is more than just a sport. For many players, it is a lifelong ambition, an opportunity to rewrite their family's future, and a pursuit that demands total dedication.
               </p>
             </div>
@@ -170,19 +170,19 @@ export function About() {
             <div className="space-y-5 pt-2 border-t border-white/[0.08]">
               {[
                 {
-                  icon: <Users className="w-5 h-5 text-[#2D7A52]" />,
+                  icon: <Users className="w-5 h-5 text-[#45AAA1]" />,
                   number: "01",
                   title: "Human-First Athlete Stewardship",
                   desc: "We refuse to treat footballers as commodities or statistics. Every player receives dedicated director-level attention, honest career counsel, mental balance guidance, and continuous personal check-ins.",
                 },
                 {
-                  icon: <Shield className="w-5 h-5 text-[#C8A45D]" />,
+                  icon: <Shield className="w-5 h-5 text-[#45AAA1]" />,
                   number: "02",
                   title: "Uncompromising Integrity & Governance",
                   desc: "Operating from London under strict compliance with FIFA and Football Association regulatory frameworks. Transparent contract negotiation, zero false promises, and genuine athlete advocacy.",
                 },
                 {
-                  icon: <Target className="w-5 h-5 text-[#2D7A52]" />,
+                  icon: <Target className="w-5 h-5 text-[#45AAA1]" />,
                   number: "03",
                   title: "Legitimate Domestic & Global Pathways",
                   desc: "We cultivate direct relationships with club sporting directors, head scouts, and academy managers across Premier League, EFL, European, and international leagues to open genuine doors.",

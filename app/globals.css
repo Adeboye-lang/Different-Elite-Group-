@@ -14,8 +14,9 @@
     --border-subtle: #2E3137;
     --border-frame: #363940;
     --border-frame-light: rgba(255, 255, 255, 0.1);
-    --green: #2D7A52;
-    --green-light: #3B9668;
+    --green: #2F8F87;
+    --brand-green: #07373B;
+    --green-light: #45AAA1;
   }
 
   * {

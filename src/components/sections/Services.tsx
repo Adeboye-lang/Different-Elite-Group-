@@ -118,7 +118,7 @@ export function Services() {
               {/* Top metadata tags */}
               <div className="relative z-10 flex items-center justify-between">
                 <div className="flex items-center gap-2 px-3 py-1 bg-[#14161A]/85 backdrop-blur-md border border-white/10">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#2D7A52]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#45AAA1]" />
                   <span className="text-[10px] uppercase font-display tracking-[0.24em] text-white font-bold">
                     DEG PRACTICE · EST. UK
                   </span>
@@ -178,7 +178,7 @@ export function Services() {
               >
                 {/* Eyebrow & Status */}
                 <div className="flex items-center gap-2.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#2D7A52]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#45AAA1]" />
                   <span className="text-xs uppercase font-display tracking-[0.24em] text-[#C8A45D] font-bold">
                     SERVICE {activeService.number} · PRACTICE OVERVIEW
                   </span>
@@ -190,7 +190,7 @@ export function Services() {
                 </h3>
 
                 {/* Strategic Overview Text with Left Accent */}
-                <p className="text-base sm:text-lg text-[#B4B8BF] font-normal leading-relaxed border-l-2 border-[#2D7A52] pl-6 py-1">
+                <p className="text-base sm:text-lg text-[#B4B8BF] font-normal leading-relaxed border-l-2 border-[#45AAA1] pl-6 py-1">
                   {activeService.shortDesc}
                 </p>
 
@@ -206,7 +206,7 @@ export function Services() {
                         key={i}
                         className="group flex items-start gap-3 py-2.5 px-2 hover:bg-white/[0.015] transition-colors border-b border-white/[0.05]"
                       >
-                        <div className="p-1 border border-white/10 bg-[#14161A] text-[#2D7A52] shrink-0 mt-0.5 group-hover:border-[#C8A45D] group-hover:text-[#C8A45D] transition-colors">
+                        <div className="p-1 border border-white/10 bg-[#14161A] text-[#45AAA1] shrink-0 mt-0.5 group-hover:border-[#C8A45D] group-hover:text-[#C8A45D] transition-colors">
                           <Check className="w-3.5 h-3.5" />
                         </div>
                         <span className="text-xs sm:text-sm text-white/90 font-normal leading-relaxed">
@@ -233,7 +233,7 @@ export function Services() {
                     Enquire Regarding {activeService.tag}
                   </Button>
 
-                  <div className="flex items-center gap-2 text-xs text-[#2D7A52] font-medium">
+                  <div className="flex items-center gap-2 text-xs text-[#45AAA1] font-medium">
                     <ShieldCheck className="w-4 h-4" />
                     <span>Confidential Athlete Intake</span>
                   </div>

@@ -45,7 +45,7 @@ export function Hero() {
           >
             {/* Live Agency Status Eyebrow */}
             <div className="inline-flex items-center gap-2.5 px-3 py-1 bg-[#14161A]/80 backdrop-blur-md border border-white/10">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#2D7A52]" />
+              <span className="w-1.5 h-1.5 rounded-full bg-[#45AAA1]" />
               <span className="text-[11px] uppercase tracking-[0.24em] text-[#B4B8BF] font-display font-semibold">
                 FOOTBALL AGENCY · LONDON, UK
               </span>
@@ -60,7 +60,7 @@ export function Hero() {
             </h1>
 
             {/* Supporting statement */}
-            <p className="text-base sm:text-lg font-normal text-[#B4B8BF] leading-relaxed max-w-xl border-l-2 border-[#2D7A52] pl-5">
+            <p className="text-base sm:text-lg font-normal text-[#B4B8BF] leading-relaxed max-w-xl border-l-2 border-[#45AAA1] pl-5">
               {siteConfig.supportingStatement}
             </p>
 

@@ -17,7 +17,7 @@ export default function HomePage() {
     name: siteConfig.name,
     alternateName: siteConfig.shortName,
     url: "https://differentelitegroup.com",
-    logo: "https://differentelitegroup.com/images/hero-cinematic.jpg",
+    logo: "https://differentelitegroup.com/logo-gold.png",
     description: siteConfig.tagline,
     address: {
       "@type": "PostalAddress",

@@ -14,7 +14,7 @@ export function BrandStatement() {
   ];
 
   return (
-    <section className="relative py-32 md:py-44 bg-[#14161A] border-t border-white/[0.06] overflow-hidden flex items-center justify-center">
+    <section className="relative py-32 md:py-44 bg-[#07373B] border-t border-white/[0.06] overflow-hidden flex items-center justify-center">
       {/* Floodlit stadium background — clearly visible, cleanly dissolved at edges */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none">
         <Image
@@ -25,9 +25,9 @@ export function BrandStatement() {
           className="object-cover object-center opacity-45 mix-blend-luminosity grayscale filter contrast-125 brightness-100"
         />
 
-        {/* Multi-stop edge dissolve into #14161A */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#14161A] via-[#14161A]/50 to-[#14161A]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#14161A] via-transparent to-[#14161A]" />
+        {/* Multi-stop edge dissolve into #07373B */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#07373B] via-[#07373B]/50 to-[#07373B]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#07373B] via-transparent to-[#07373B]" />
       </div>
 
       {/* Content Container */}
@@ -40,7 +40,7 @@ export function BrandStatement() {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-3 mb-8"
         >
-          <span className="w-1.5 h-1.5 rounded-full bg-[#2D7A52]" />
+          <span className="w-1.5 h-1.5 rounded-full bg-[#C8A45D]" />
           <span className="text-xs uppercase font-display tracking-[0.28em] text-[#B4B8BF] font-bold">
             THE DEG MANIFESTO
           </span>
